@@ -17,6 +17,34 @@
     <meta name="msapplication-TileColor" content="#8b3dff" />
     <meta name="msapplication-config" content="./assets/images/favicon/tile.xml" />
 
+    <!--No scrollbar mode-->
+    <style>
+        
+        ::-webkit-scrollbar {
+          width: 12px; 
+        }
+      
+        ::-webkit-scrollbar-track {
+          background:  rgba(6, 88, 230, 0.1);
+          
+        }
+      
+        ::-webkit-scrollbar-thumb {
+          background: rgba(0, 0, 0, 0.2); 
+          border-radius: 10px;
+          border: 1px solid rgba(8, 143, 255,1);
+        }
+      
+        ::-webkit-scrollbar-thumb:hover {
+          background: rgba(5, 5, 178, 0.497); 
+        }
+      
+        
+        body {
+          scrollbar-width: thin; /* 'auto' or 'thin' */
+          scrollbar-color: rgba(0, 0, 0, 0.2) transparent; 
+        }
+      </style>
     <!-- Color modes -->
     <script src="./assets/js/vendors/color-modes.js"></script>
 
