@@ -1818,8 +1818,9 @@
     --bs-danger-text-emphasis: #580816;
     --bs-light-text-emphasis: #334155;
     --bs-dark-text-emphasis: #334155;
-    --bs-primary-bg-subtle: #e8d8ff;
-    --bs-secondary-bg-subtle: #f9fafc;
+    --bs-primary-bg-subtle: #e8f4ff;
+    --bs-primary-bg-text-subtle: #381866;
+    --bs-secondary-bg-subtle: #f4f8ff;
     --bs-success-bg-subtle: #cce6ce;
     --bs-info-bg-subtle: #cff4fc;
     --bs-warning-bg-subtle: #fff3cd;
@@ -1913,8 +1914,9 @@
     --bs-danger-text-emphasis: #e97286;
     --bs-light-text-emphasis: #f1f5f9;
     --bs-dark-text-emphasis: #cbd5e1;
-    --bs-primary-bg-subtle: #532599;
-    --bs-secondary-bg-subtle: #2d2e30;
+    --bs-primary-bg-subtle: #0b3d91;
+    --bs-secondary-bg-subtle: #003366;
+    --bs-primary-bg-text-subtle: #f5f5f5;
     --bs-success-bg-subtle: #001a02;
     --bs-info-bg-subtle: #032830;
     --bs-warning-bg-subtle: #332701;
@@ -19656,7 +19658,7 @@ iframe {
 
 ::selection {
     background: var(--bs-primary-bg-subtle);
-    color: #381866
+    color: var(--bs-primary-bg-text-subtle);
 }
 
 ::-moz-selection {
