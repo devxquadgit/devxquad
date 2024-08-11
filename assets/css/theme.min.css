@@ -101,7 +101,7 @@
 }
 
 .bg-primary-gradient {
-    background: linear-gradient(180deg, #9b58ff, #8837ff 47.92%, #7a20ff)
+    background: linear-gradient(180deg, #ff6f6f, #ff4d4d 47.92%, #ff3333);
 }
 
 .color-facebook {
@@ -1793,7 +1793,7 @@
     --bs-gray-700: #334155;
     --bs-gray-800: #1e293b;
     --bs-gray-900: #0f172a;
-    --bs-primary: #8b3dff;
+    --bs-primary: #e04343;
     --bs-secondary: #e2e8f0;
     --bs-success: #008008;
     --bs-info: #0dcaf0;
@@ -1802,7 +1802,7 @@
     --bs-light: #f1f5f9;
     --bs-dark: #0f172a;
     --bs-white: #fff;
-    --bs-primary-rgb: 139, 61, 255;
+    --bs-primary-rgb: 255, 0, 0;
     --bs-secondary-rgb: 226, 232, 240;
     --bs-success-rgb: 0, 128, 8;
     --bs-info-rgb: 13, 202, 240;
@@ -1826,7 +1826,7 @@
     --bs-danger-bg-subtle: #f8d0d7;
     --bs-light-bg-subtle: #f8fafc;
     --bs-dark-bg-subtle: #94a3b8;
-    --bs-primary-border-subtle: #d1b1ff;
+    --bs-primary-border-subtle: #f5b1b1;
     --bs-secondary-border-subtle: #f3f6f9;
     --bs-success-border-subtle: #99cc9c;
     --bs-info-border-subtle: #9eeaf9;
@@ -1859,10 +1859,10 @@
     --bs-tertiary-bg-rgb: 241, 245, 249;
     --bs-heading-color: var(--bs-gray-800);
     --bs-link-color: #8b3dff;
-    --bs-link-color-rgb: 139, 61, 255;
+    --bs-link-color-rgb: 255, 77, 77;
     --bs-link-decoration: none;
     --bs-link-hover-color: #6f31cc;
-    --bs-link-hover-color-rgb: 111, 49, 204;
+    --bs-link-hover-color-rgb: 204, 0, 0;
     --bs-code-color: #d63384;
     --bs-highlight-color: #64748b;
     --bs-highlight-bg: #fff3cd;
@@ -5236,19 +5236,19 @@ fieldset:disabled .btn {
 
 .btn-primary {
     --bs-btn-color: #fff;
-    --bs-btn-bg: #8b3dff;
-    --bs-btn-border-color: #8b3dff;
+    --bs-btn-bg: #ff4d4d; /* Red background */
+    --bs-btn-border-color: #ff4d4d; /* Red border */
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #7634d9;
-    --bs-btn-hover-border-color: #6f31cc;
-    --bs-btn-focus-shadow-rgb: 156, 90, 255;
+    --bs-btn-hover-bg: #e04343; /* Darker red for hover */
+    --bs-btn-hover-border-color: #c93636; /* Darker red border on hover */
+    --bs-btn-focus-shadow-rgb: 255, 77, 77; /* Red focus shadow */
     --bs-btn-active-color: #fff;
-    --bs-btn-active-bg: #6f31cc;
-    --bs-btn-active-border-color: #682ebf;
+    --bs-btn-active-bg: #c93636; /* Darker red for active */
+    --bs-btn-active-border-color: #b02b2b; /* Even darker red border on active */
     --bs-btn-active-shadow: inset 0 3px 5px rgba(2, 6, 23, .125);
     --bs-btn-disabled-color: #fff;
-    --bs-btn-disabled-bg: #8b3dff;
-    --bs-btn-disabled-border-color: #8b3dff
+    --bs-btn-disabled-bg: #ff4d4d; /* Red background for disabled state */
+    --bs-btn-disabled-border-color: #ff4d4d; /* Red border for disabled state */
 }
 
 .btn-secondary {
@@ -21767,12 +21767,12 @@ div.code-toolbar>.toolbar>.toolbar-item>span:hover {
 }
 
 :root {
-    --swiper-theme-color: #8b3dff
+    --swiper-theme-color: #e04343
 }
 
 .swiper-pagination-bullet {
     background: transparent;
-    border: 2px solid #8b3dff;
+    border: 2px solid #e04343;
     border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
     display: inline-block;
     height: 10px;
@@ -21782,7 +21782,7 @@ div.code-toolbar>.toolbar>.toolbar-item>span:hover {
 
 .swiper-pagination-bullet-active {
     background: var(--swiper-pagination-color, var(--swiper-theme-color));
-    border-color: #8b3dff;
+    border-color: #e04343;
     opacity: var(--swiper-pagination-bullet-opacity, 1)
 }
 
