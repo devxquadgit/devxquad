@@ -1878,6 +1878,7 @@
     --bs-border-radius-xxl: 2rem;
     --bs-border-radius-2xl: var(--bs-border-radius-xxl);
     --bs-border-radius-pill: 50rem;
+    --bs-border-radius-circle: 50%;
     --bs-box-shadow: 0 0.5rem 1rem rgba(2, 6, 23, .15);
     --bs-box-shadow-sm: 0 0.125rem 0.25rem rgba(2, 6, 23, .075);
     --bs-box-shadow-lg: 0 1rem 3rem rgba(2, 6, 23, .175);
@@ -12185,6 +12186,10 @@ fieldset:disabled .btn {
 
 .pe-auto {
     pointer-events: auto !important
+}
+
+.border-circle {
+    border-radius: var(--bs-border-radius-circle) !important
 }
 
 .rounded {
