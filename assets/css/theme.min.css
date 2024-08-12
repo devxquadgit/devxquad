@@ -10082,6 +10082,10 @@ fieldset:disabled .btn {
     --bs-border-opacity: 1;
     border-color: rgba(var(--bs-primary-rgb), var(--bs-border-opacity)) !important
 }
+.border-primary-card {
+    --bs-border-opacity: 1;
+    border-color: rgba(var(--bs-primary-rgb), .5) !important
+}
 
 .border-secondary {
     --bs-border-opacity: 1;
@@ -10282,6 +10286,10 @@ fieldset:disabled .btn {
 
 .flex-column-reverse {
     flex-direction: column-reverse !important
+}
+
+.max-width-33 {
+    max-width: 25%;
 }
 
 .flex-grow-0 {
@@ -23414,4 +23422,26 @@ a.plyr__control:before {
     --bs-table-color: var(--bs-body-color);
     --bs-table-bg: var(--bs-light);
     --bs-table-border-color: currentcolor
+}
+
+.div-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.div-shine::after {
+  content: '';
+  position: absolute;
+  top: -50%; right: -50%;
+  bottom: -50%; left: -50%;
+  background: linear-gradient(75deg, transparent, rgba(18, 143, 255,.5), transparent);
+  transform: rotate(30deg);
+  transition: transform 0.5s, opacity 0.5s;
+  opacity: 0;
+}
+
+.div-shine:hover::after {
+  transform: rotate(30deg) translateX(300%);
+  opacity: 1;
+  transition: transform 2s, opacity 0.5s;
 }
