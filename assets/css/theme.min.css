@@ -20815,6 +20815,20 @@ video {
     color: #fff !important
 }
 
+.btn-socialmedia {
+    background-color: var(--bs-gray-100);
+    border: 1px solid var(--bs-gray-200);
+    color: var(--bs-gray-500);
+}
+
+.btn-socialmedia:active,
+.btn-socialmedia:focus,
+.btn-socialmedia:hover {
+    background-color: #b80b0a !important;
+    border-color: #b80b0a !important;
+    color: #fff !important;
+}
+
 .btn-instagram {
     background-color: var(--bs-gray-100);
     border: 1px solid var(--bs-gray-200);
