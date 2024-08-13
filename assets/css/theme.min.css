@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
 .text-reset:hover {
     color: var(--bs-primary) !important
 }
@@ -101,7 +103,7 @@
 }
 
 .bg-primary-gradient {
-    background: linear-gradient(180deg, #e46666, #b80b0a 47.92%, #930909);
+    background: linear-gradient(180deg, #FFDD66, #FFB902 47.92%, #E6A200);
 }
 
 .color-facebook {
@@ -3792,7 +3794,7 @@ progress {
         margin-left: 0
     }
     .offset-xxl-1 {
-        margin-left: 8.33333333%
+        /* margin-left: 2.33333333% */
     }
     .offset-xxl-2 {
         margin-left: 16.66666667%
@@ -23429,4 +23431,34 @@ a.plyr__control:before {
     --bs-table-color: var(--bs-body-color);
     --bs-table-bg: var(--bs-light);
     --bs-table-border-color: currentcolor
+}
+
+.newsletter {
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.newsletter-input {
+    width: 50%;
+}
+
+.newsletter-btn {
+    width: 15%;
+}
+
+.mainheading {
+    font-family: "Caveat", cursive;
+    font-weight: 700;
+}
+
+.otherheadings {
+    font-family: "Caveat", cursive;
+    font-size: 2.5rem;
+}
+
+.dark-text {
+    color: #050038;
 }

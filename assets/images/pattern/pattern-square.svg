@@ -5,7 +5,7 @@
 
     /* Define the Bootstrap primary color variable */
     :root {
-      --bs-primary: #8b3dff; /* Change this to your desired Bootstrap primary color */
+      --bs-primary: #ffb902; /* Change this to your desired Bootstrap primary color */
     }
   </style>
 <rect x="0.5" y="129.041" width="66" height="64.2854" stroke="var(--bs-primary)" stroke-opacity="0.09"/>
