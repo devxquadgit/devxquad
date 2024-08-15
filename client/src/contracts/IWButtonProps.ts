@@ -1,7 +1,11 @@
 export interface IWButtonProps {
-  children: React.ReactNode;
-  onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';
-  variant?: 'primary' | 'secondary' | 'danger';
+  label: string;
+  width?: string;
+  bgcolor?: string;
+  textColor?: string;
+  rounded?: boolean;
   className?: string;
+  submit?: boolean;
+  loading?: boolean;
+  function?: () => void;
 }
