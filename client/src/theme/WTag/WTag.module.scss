@@ -1,0 +1,26 @@
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  
+  &.default {
+    background-color: #e5e7eb;
+    color: #374151;
+  }
+
+  &.success {
+    background-color: #d1fae5;
+    color: #065f46;
+  }
+
+  &.warning {
+    background-color: #fef3c7;
+    color: #92400e;
+  }
+
+  &.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+  }
+}
