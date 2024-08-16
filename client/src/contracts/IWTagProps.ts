@@ -1,5 +1,8 @@
 export interface IWTagProps {
-  label: string;
-  variant?: 'default' | 'success' | 'warning' | 'error';
-  className?: string;
+  icon: JSX.Element;       
+  label?: string;          
+  href?: string;           
+  type: 'circle-sm' | 'circle-md' | 'pill'; 
+  bordered?: boolean;      
+  clickable?: boolean;     
 }
