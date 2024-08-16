@@ -7,5 +7,5 @@ export interface IWButtonProps {
   className?: string;
   submit?: boolean;
   loading?: boolean;
-  function?: () => void;
+  onClick?: () => void;
 }

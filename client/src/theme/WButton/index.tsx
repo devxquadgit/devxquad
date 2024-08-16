@@ -20,7 +20,7 @@ const StyledButton = styled(Button)<{ width?: string; bgcolor?: string; textColo
   }
 `;
 
-const WButton: React.FC<IWButtonProps> = ({
+const index: React.FC<IWButtonProps> = ({
   label,
   width,
   bgcolor,
@@ -29,7 +29,7 @@ const WButton: React.FC<IWButtonProps> = ({
   className = '',
   submit = false,
   loading = false,
-  function: handleClick,
+  onClick,
 }) => {
   return (
     <div>
@@ -41,7 +41,7 @@ const WButton: React.FC<IWButtonProps> = ({
         rounded={rounded}
         className={className}
         type={submit ? 'submit' : 'button'}
-        onClick={!submit ? handleClick : undefined}
+        onClick={!submit ? onClick : undefined}
         disabled={loading}
       >
         {loading ? 'Loading...' : label}
@@ -50,4 +50,4 @@ const WButton: React.FC<IWButtonProps> = ({
   );
 };
 
-export default WButton;
+export default index;
