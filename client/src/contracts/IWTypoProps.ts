@@ -1,5 +1,5 @@
 export interface IWTypoProps {
-  variant: 'h1' | 'h2' | 'h3' | 'p' | 'span';
-  children: React.ReactNode;
-  className?: string;
+  label: string;
+  type?: 'main-lg' | 'main-md' | 'sub-lg' | 'sub-md' | 'sub-sm';
+  color?: string;
 }
