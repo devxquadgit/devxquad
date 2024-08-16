@@ -2,13 +2,17 @@ import React from 'react';
 import WButton from '../theme/WButton';
 import WTypo from '../theme/WTypo';
 import WTag from '@/theme/WTag';
-
 import TwitterIcon from '../assets/twitter.svg';
+
+import Navbar from '@/components/Navbar'
+import Layout from '@/components/layout'
 
 
 function index() {
   return (
     <div>
+      <Navbar />
+      <Layout />
       {/* <WButton
         label="Contact us"
         bgcolor="#b80b0a"
@@ -17,8 +21,8 @@ function index() {
         rounded
         onClick={() => console.log('Button clicked!')}
       /> */}
-      {/* <WTypo label="Small Subheading" type="sub-md" color="red" /> */}
-      <div>
+      {/* <WTypo label="link" type="arrow-link" url='https://www.google.com' color="red" /> */}
+      {/* <div>
         <WTag
           icon={<TwitterIcon width={22} height={22}/>}
           href="https://twitter.com/example" 
@@ -33,7 +37,7 @@ function index() {
           type="pill"
           bordered
         />
-      </div>
+      </div> */}
     </div>
   );
 }
