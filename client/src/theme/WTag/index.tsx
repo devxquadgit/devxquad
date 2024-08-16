@@ -42,19 +42,19 @@ const StyledTag = styled.div<{
 const WTag: React.FC<IWTagProps> = ({
 	icon,
 	label,
-	href,
+	url,
 	type,
 	bordered = false,
 	clickable = false,
 }) => {
 
-	return clickable && href ? (
+	return clickable && url ? (
     <StyledTag
 			type={type}
 			bordered={bordered}
 			clickable={clickable}
 		>
-      <Link href={href} target="_blank">
+      <Link href={url} target="_blank">
         {icon}
         {type === "pill" && label && <span>{label}</span>}
       </Link>
