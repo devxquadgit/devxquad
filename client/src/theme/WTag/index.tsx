@@ -24,13 +24,13 @@ const StyledTag = styled.div<{
 	font-family: monospace;
 	padding: ${({ type }) => (type === "pill" ? "0 0.5rem" : "0")};
 	transition: background-color 0.3s;
+	user-select: none;
 
 	&:hover {
 		background-color: ${({ clickable }) =>
 			clickable ? "#f0f0f0" : "dodgerblue"};
 		cursor: ${({ clickable }) =>
 			clickable ? "pointer" : "normal"};
-
 	}
 
 	svg {
@@ -48,20 +48,13 @@ const WTag: React.FC<IWTagProps> = ({
 	clickable = false,
 }) => {
 
-	const handleClick = () => {
-		if (clickable && href) {
-			window.open(href, "_blank", "noopener,noreferrer");
-		}
-	};
-
 	return clickable && href ? (
     <StyledTag
 			type={type}
 			bordered={bordered}
 			clickable={clickable}
-			onClick={handleClick}
 		>
-      <Link href={href} passHref>
+      <Link href={href} target="_blank">
         {icon}
         {type === "pill" && label && <span>{label}</span>}
       </Link>
@@ -71,7 +64,6 @@ const WTag: React.FC<IWTagProps> = ({
 			type={type}
 			bordered={bordered}
 			clickable={clickable}
-			onClick={handleClick}
 		>
       {icon}
       {type === "pill" && label && <span>{label}</span>}
