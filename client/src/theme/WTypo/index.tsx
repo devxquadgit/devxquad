@@ -4,11 +4,12 @@ import { IWTypoProps } from "@/contracts/IWTypoProps";
 import { Typography } from "@mui/material";
 import Link from "next/link";
 
-const StyledTypo = styled(Typography)<{ type?: string; color?: string }>`
-	@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+const StyledTypo = styled(Typography)<{ type?: string; color?: string, bold?: string }>`
 	font-size: ${(props) => getFontStyles(props.type).fontSize};
 	font-family: ${(props) => getFontStyles(props.type).fontFamily};
 	color: ${(props) => props.color || "black"};
+	line-height: ${(props) => props.type === "main-lg" ? 1.25 : props.type === "sub-lg" ? "30px" : "normal"};
+	font-weight: ${(props) => props.bold || "normal"};
 `;
 
 const StyledLink = styled(Link)<{ color?: string, type?: string }>`
@@ -34,10 +35,10 @@ const StyledLink = styled(Link)<{ color?: string, type?: string }>`
 
 const getFontStyles = (
 	type?: string
-): { fontSize?: string; fontFamily?: string } => {
+): { fontSize?: string; fontFamily?: string, bold?:string } => {
 	switch (type) {
 		case "main-lg":
-			return { fontSize: "50px", fontFamily: "'Caveat', cursive" };
+			return { fontSize: "52px", fontFamily: "'Caveat', cursive" };
 		case "main-md":
 			return { fontSize: "32px", fontFamily: "'Caveat', cursive" };
 		case "sub-lg":
@@ -55,23 +56,23 @@ const getFontStyles = (
 	}
 };
 
-const index: React.FC<IWTypoProps> = ({ label, type, color, url }) => {
+const index: React.FC<IWTypoProps> = ({ label, type, color, url, bold }) => {
 	return (
 		<div>
 			{type === "link" && url ? (
-				<StyledTypo variant="body1" type={type} color={color}>
+				<StyledTypo variant="body1" type={type} color={color} bold={bold}>
 					<StyledLink href={url} type={type} color={color} target="_blank">
 						{label}
 					</StyledLink>
 				</StyledTypo>
 			) : type === "arrow-link" && url ? (
-				<StyledTypo variant="body1" type={type} color={color}>
+				<StyledTypo variant="body1" type={type} color={color} bold={bold}>
 					<StyledLink href={url} type={type} color={color} target="_blank">
 						{label}
 					</StyledLink>
 				</StyledTypo>
 			) : (
-				<StyledTypo variant="body1" type={type} color={color}>
+				<StyledTypo variant="body1" type={type} color={color} bold={bold}>
 					{label}
 				</StyledTypo>
 			)}
