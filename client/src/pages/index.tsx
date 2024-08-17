@@ -5,14 +5,31 @@ import WTag from '@/theme/WTag';
 import TwitterIcon from '../assets/twitter.svg';
 
 import Navbar from '@/components/Navbar'
-import Layout from '@/components/layout'
+import Layout from '@/components/Layout'
+import Styled from '@emotion/styled';
+
+const ContainerDiv = Styled.div`
+  --bs-gutter-x: 2.5rem;
+  --bs-gutter-y: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(var(--bs-gutter-x)* .5);
+  padding-right: calc(var(--bs-gutter-x)* .5);
+  width: 100%;
+  
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+`;
 
 
 function index() {
   return (
     <div>
       <Navbar />
-      <Layout />
+      <ContainerDiv>
+        <Layout />
+      </ContainerDiv>
       {/* <WButton
         label="Contact us"
         bgcolor="#b80b0a"
