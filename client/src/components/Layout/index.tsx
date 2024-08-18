@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "@emotion/styled";
 import WTypo from "@/theme/WTypo";
+import WTag from "@/theme/WTag";
 import WButton from "@/theme/WButton";
 import Img from "@/assets/landing/img1.png";
+import CreditCardIcon from '../../assets/icons/creditcard.svg';
+import MoneyIcon from '../../assets/icons/money.svg';
 
 const StyledDiv = styled.div`
 	width: 100%;
@@ -52,6 +55,18 @@ const StyledHeading = styled.div`
   margin-bottom: 2rem;
 `;
 
+const StyledTagDiv = styled.div`
+    margin: 2.5rem 0;
+		display: flex;
+		gap: 24px;
+`;
+
+const StyledTag = styled.div`
+    display: flex;
+		align-items: center;
+		gap: 8px;
+`;
+
 
 const index = () => {
 	return (
@@ -86,6 +101,32 @@ const index = () => {
 					rounded
 					onClick={() => console.log("Button clicked!")}
 				/>
+				<StyledTagDiv>
+					<StyledTag>
+						<WTag
+							icon={<CreditCardIcon/>}
+							type="circle-sm"
+							bordered
+						/>
+						<WTypo
+							label="No credit card required"
+							type="sub-sm"
+							color="#64748b"
+						/>
+					</StyledTag>
+					<StyledTag>
+						<WTag
+							icon={<MoneyIcon/>}
+							type="circle-sm"
+							bordered
+						/>
+						<WTypo
+							label="Free until upgrade"
+							type="sub-sm"
+							color="#64748b"
+						/>
+					</StyledTag>
+				</StyledTagDiv>
 			</StyledContent>
 			<StyledImageMain>
 				<StyledImage src={Img.src} width="100%" alt="Landing Image" />
