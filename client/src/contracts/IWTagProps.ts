@@ -4,5 +4,6 @@ export interface IWTagProps {
   url?: string;           
   type: 'circle-sm' | 'circle-md' | 'pill'; 
   bordered?: boolean;      
-  clickable?: boolean;     
+  clickable?: boolean;   
+  bgcolor?: string;  
 }
