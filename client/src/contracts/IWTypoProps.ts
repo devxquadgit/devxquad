@@ -4,4 +4,5 @@ export interface IWTypoProps {
   color?: string;
   url?: string; 
   bold?: string;
+  style?: React.CSSProperties;
 }
