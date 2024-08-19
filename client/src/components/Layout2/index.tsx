@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
 import WTypo from "@/theme/WTypo";
+import CreditCardIcon from '@/assets/icons/creditcard.svg';
+import Card from '@/components/Card'
 
 const StyledDiv = styled.div`
 	width: 100%;
@@ -45,6 +47,11 @@ const index = () => {
 						style={{ textAlign: 'center' }}
 					/>
 				</StyledHeading>
+				<Card
+					SVG={<CreditCardIcon />}
+					Heading="Tasks"
+					Desc="Break big projects into chunks 🍕. Tackle tasks one slice at a time and watch your team conquer!"
+				/>
 			</StyledHeadingMain>
 
 		</StyledDiv>
