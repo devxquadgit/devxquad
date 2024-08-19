@@ -1,0 +1,32 @@
+[
+  {
+    "SVG": "/assets/feature/task.svg",
+    "Heading": "Tasks",
+    "Desc": "Break big projects into chunks 🍕. Tackle tasks one slice at a time and watch your team conquer!"
+  },
+  {
+    "SVG": "/assets/feature/milestones.svg",
+    "Heading": "Milestones",
+    "Desc": "Mark key checkpoints 🗺️. Track progress and share wins—your project’s treasure map to success!"
+  },
+  {
+    "SVG": "/assets/feature/time.svg",
+    "Heading": "Due Dates and Times",
+    "Desc": "Set deadlines ⏰ so everyone’s aligned. No more “oops” moments—just smooth sailing!"
+  },
+  {
+    "SVG": "/assets/feature/templates.svg",
+    "Heading": "Custom Templates",
+    "Desc": "Create templates 🛠️ for fast project starts. It’s like having a shortcut to success!"
+  },
+  {
+    "SVG": "/assets/feature/attachments.svg",
+    "Heading": "Attachments",
+    "Desc": "Add files 📎 from your computer or cloud. All your essentials, right where you need them!"
+  },
+  {
+    "SVG": "/assets/feature/teammate.svg",
+    "Heading": "Teammate",
+    "Desc": "Check out who’s doing what 👀. Keep workloads balanced and projects on track!"
+  }
+]
