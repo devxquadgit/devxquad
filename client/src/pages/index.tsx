@@ -6,6 +6,7 @@ import TwitterIcon from '../assets/twitter.svg';
 
 import Navbar from '@/components/Navbar'
 import Layout from '@/components/Layout'
+import Layout2 from '@/components/Layout2'
 import Styled from '@emotion/styled';
 
 const ContainerDiv = Styled.div`
@@ -22,6 +23,9 @@ const ContainerDiv = Styled.div`
   }
 `;
 
+const MarginDiv = Styled.div`
+  padding: 1rem;
+`;
 
 function index() {
   return (
@@ -29,6 +33,10 @@ function index() {
       <Navbar />
       <ContainerDiv>
         <Layout />
+      </ContainerDiv>
+      <MarginDiv />
+      <ContainerDiv>
+        <Layout2 />
       </ContainerDiv>
       {/* <WButton
         label="Contact us"
