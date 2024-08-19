@@ -14,7 +14,6 @@ const StyledTag = styled.div`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  gap: 8px;
 `;
 
 const index: React.FC<ICardProps> = ({ SVG, Heading, Desc }) => {
@@ -23,14 +22,16 @@ const index: React.FC<ICardProps> = ({ SVG, Heading, Desc }) => {
       <StyledTag>
         <WTag
           icon={SVG}
-          type="circle-md"
+          type="circle-lg"
           bordered
+          style={{marginBottom: '32px', color: '#B80B0A', backgroundColor: 'rgba(184, 11, 10, 0.1)', borderColor: '#e4a1a1'}}
         />
         <div>
           <WTypo
             label={Heading}
             type="sub-lg"
             color="#1e293b"
+            style={{marginBottom: "8px"}}
           />
           <WTypo
             label={Desc}
