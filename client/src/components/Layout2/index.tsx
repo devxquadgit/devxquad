@@ -1,8 +1,15 @@
 import React from "react";
 import styled from "@emotion/styled";
 import WTypo from "@/theme/WTypo";
-import CreditCardIcon from '@/assets/icons/creditcard.svg';
 import Card from '@/components/Card'
+
+// icons
+import TaskIcon from '@/assets/feature/task.svg'
+import MilestonesIcon from '@/assets/feature/milestones.svg'
+import TimeIcon from '@/assets/feature/time.svg'
+import TemplatesIcon from '@/assets/feature/templates.svg'
+import AttachmentsIcon from '@/assets/feature/attachments.svg'
+import TeammateIcon from '@/assets/feature/teammate.svg'
 
 const StyledDiv = styled.div`
 	width: 100%;
@@ -48,9 +55,19 @@ const index = () => {
 					/>
 				</StyledHeading>
 				<Card
-					SVG={<CreditCardIcon />}
+					SVG={<TaskIcon />}
 					Heading="Tasks"
 					Desc="Break big projects into chunks 🍕. Tackle tasks one slice at a time and watch your team conquer!"
+				/>
+				<Card
+					SVG={<MilestonesIcon />}
+					Heading="Milestones"
+					Desc="Mark key checkpoints 🗺️. Track progress and share wins—your project’s treasure map to success!"
+				/>
+				<Card
+					SVG={<TaskIcon />}
+					Heading="Due Dates and Times"
+					Desc="Set deadlines ⏰ so everyone’s aligned. No more “oops” moments—just smooth sailing!"
 				/>
 			</StyledHeadingMain>
 
