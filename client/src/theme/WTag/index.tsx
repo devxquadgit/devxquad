@@ -8,6 +8,7 @@ const StyledTag = styled.div<{
 	type: "circle-sm" | "circle-md" | "pill";
 	bordered?: boolean;
 	clickable?: boolean;
+	bgcolor?: string;
 }>`
 	width: ${({ type }) =>
 		type === "pill" ? "7.5rem" : type === "circle-sm" ? "2rem" : "3rem"};
@@ -16,10 +17,9 @@ const StyledTag = styled.div<{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 14px;
 	border-radius: ${({ type }) => (type === "pill" ? "50px" : "50%")};
 	border: ${({ bordered }) => (bordered ? "1px solid #ccc" : "none")};
-	background-color: dodgerblue;
+	background-color: ${({ bgcolor }) => (bgcolor ? bgcolor : "transparent")};;
 	color: white;
 	font-family: monospace;
 	padding: ${({ type }) => (type === "pill" ? "0 0.5rem" : "0")};
@@ -46,6 +46,7 @@ const WTag: React.FC<IWTagProps> = ({
 	type,
 	bordered = false,
 	clickable = false,
+	bgcolor
 }) => {
 
 	return clickable && url ? (
@@ -53,6 +54,7 @@ const WTag: React.FC<IWTagProps> = ({
 			type={type}
 			bordered={bordered}
 			clickable={clickable}
+			bgcolor={bgcolor}
 		>
       <Link href={url} target="_blank">
         {icon}
@@ -64,6 +66,7 @@ const WTag: React.FC<IWTagProps> = ({
 			type={type}
 			bordered={bordered}
 			clickable={clickable}
+			bgcolor={bgcolor}
 		>
       {icon}
       {type === "pill" && label && <span>{label}</span>}
