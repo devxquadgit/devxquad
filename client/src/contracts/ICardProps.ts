@@ -1,5 +1,7 @@
+import { ComponentType } from "react";
+
 export interface ICardProps {
-  SVG: JSX.Element;
+  SVG: ComponentType;
   Heading: string;
   Desc: string;
 }

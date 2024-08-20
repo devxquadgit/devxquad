@@ -21,7 +21,7 @@ const index: React.FC<ICardProps> = ({ SVG, Heading, Desc }) => {
     <StyledTagDiv>
       <StyledTag>
         <WTag
-          icon={SVG}
+          icon={<SVG />}
           type="circle-lg"
           bordered
           style={{marginBottom: '32px', color: '#B80B0A', backgroundColor: 'rgba(184, 11, 10, 0.1)', borderColor: '#e4a1a1'}}
