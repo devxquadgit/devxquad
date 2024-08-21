@@ -4,8 +4,8 @@ export interface IWButtonProps {
   bgcolor?: string;
   textColor?: string;
   rounded?: boolean;
-  className?: string;
   submit?: boolean;
   loading?: boolean;
   onClick?: () => void;
+  style?: React.CSSProperties;
 }

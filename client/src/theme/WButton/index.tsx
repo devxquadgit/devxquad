@@ -26,10 +26,10 @@ const index: React.FC<IWButtonProps> = ({
   bgcolor,
   textColor,
   rounded = false,
-  className = '',
   submit = false,
   loading = false,
   onClick,
+  style
 }) => {
   return (
     <div>
@@ -39,7 +39,7 @@ const index: React.FC<IWButtonProps> = ({
         bgcolor={bgcolor}
         textColor={textColor}
         rounded={rounded}
-        className={className}
+        style={style}
         type={submit ? 'submit' : 'button'}
         onClick={!submit ? onClick : undefined}
         disabled={loading}
