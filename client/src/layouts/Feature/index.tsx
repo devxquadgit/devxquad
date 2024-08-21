@@ -8,6 +8,7 @@ const StyledDiv = styled.div`
   width: 100%;
   display: flex;
   margin: 3rem 0;
+  padding-bottom: 40px;
 `;
 
 const StyledHeading = styled.div`
