@@ -7,7 +7,7 @@ import WInput from '@/theme/WInput'
 const StyledNewsletterDiv = styled.div`
   margin-top: 100px;
   border-radius: 0.75rem;
-  padding: 48px;
+  padding: 80px 48px;
 	display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +17,7 @@ const StyledNewsletterDiv = styled.div`
 const StyledForm = styled.div`
   margin-top: 32px;
 	display: flex;
-  gap: 0.5rem;
+  gap: 0.8rem;
 `;
 
 const index = () => {
