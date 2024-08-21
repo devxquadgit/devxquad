@@ -3,31 +3,29 @@ import styled from "@emotion/styled";
 import WTypo from "@/theme/WTypo";
 import infoData from "./infoData";
 import WTag from "@/theme/WTag";
-import TickIcon from '@/assets/icons/tick.svg';
-import { IInfoLayoutProps } from "@/contracts/IInfoLayoutProps";
+import TickIcon from "@/assets/icons/tick.svg";
 
 const StyledDiv = styled.div`
-  --bs-gutter-x: 2rem;
-  --bs-gutter-y: 0;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 100px;
 `;
 
-const StyledHeading = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 0 1rem;
-  margin-bottom: 80px;
-  width: 40.5%;
+const StyledHeading = styled.div<{ isEven: boolean }>`
+	display: flex;
+	flex-direction: column;
+	padding: 0 1rem;
+	width: ${({ isEven }) => (isEven ? "40.5%" : "42.5%")};
+	order: ${({ isEven }) => (isEven ? "0" : "1")};
 `;
 
-const StyledImageMain = styled.div`
-  width: 57%;
-  padding-left: 8.3%;
-  margin: 0 1rem;
+const StyledImageMain = styled.div<{ isEven: boolean }>`
+	width: ${({ isEven }) => (isEven ? "57%" : "55%")};
+	padding-left: ${({ isEven }) => (isEven ? "8.3%" : "0")};
+	padding-right: ${({ isEven }) => (isEven ? "0" : "6.2%")};
+	margin: 0 1rem;
 `;
 
 const StyledPoints = styled.div`
@@ -36,62 +34,84 @@ const StyledPoints = styled.div`
 	gap: 0.3rem;
 `;
 
+const StyledPointsMain = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+	margin-bottom: 32px;
+`;
 
-const index: React.FC<IInfoLayoutProps> = ({ index }) => {
-  const data = infoData[index];
+const InfoLayout: React.FC = () => {
+	return (
+		<>
+			{infoData.map((data, index) => {
+				const isEvenIndex = index % 2 === 0;
 
-  return (
-    <StyledDiv>
-      <StyledHeading>
-        <WTypo
-          label={data.Topic}
-          type="sub-sm"
-          color="rgba(184, 11, 10, 1)"
-        />
-        <WTypo
-          label={data.Heading}
-          type="main-md"
-          color="#1e293b"
-        />
-        <WTypo
-          label={data.Desc}
-          type="sub-lg"
-          color="#64748b"
-        />
-				{data.Points && (
-					data.Points.map((point:string) => (
-						<StyledPoints>
-							<WTag
-								icon={<TickIcon/>}
-								type="circle-sm"
+				return (
+					<StyledDiv key={index}>
+						<StyledHeading isEven={isEvenIndex}>
+							<WTypo
+								label={data.Topic}
+								type="sub-sm"
+								color="rgba(184, 11, 10, 1)"
+							/>
+							<WTypo
+								label={data.Heading}
+								type="main-md"
+								color="#1e293b"
 								style={{
-									color: 'green',
-									width: '20px',
-									height: '20px',
+									marginTop: "24px",
+									marginBottom: "1rem",
 								}}
 							/>
 							<WTypo
-								label={point}
-								type="sub-md"
+								label={data.Desc}
+								type="sub-lg"
 								color="#64748b"
+								style={{ marginBottom: "32px" }}
 							/>
-						</StyledPoints>
-					))
-				)}
-        {data.Url && (
-          <WTypo
-            label="Learn More"
-            type="arrow-link"
-            color="#b80b0a"
-            // onClick={() => window.location.href = data.Url}
-          />
-        )}
-      </StyledHeading>
-      <StyledImageMain>
-        <img src={data.Image} width="100%" alt="Landing Image" />
-      </StyledImageMain>
-    </StyledDiv>
-  );
+							{data.Points && (
+								<StyledPointsMain>
+									{data.Points.map((point: string, idx) => (
+										<StyledPoints key={idx}>
+											<WTag
+												icon={<TickIcon />}
+												type="circle-sm"
+												style={{
+													color: "green",
+													width: "20px",
+													height: "20px",
+												}}
+											/>
+											<WTypo
+												label={point}
+												type="sub-md"
+												color="#64748b"
+											/>
+										</StyledPoints>
+									))}
+								</StyledPointsMain>
+							)}
+							{data.Url && (
+								<WTypo
+									label="Learn More"
+									type="arrow-link"
+									color="#b80b0a"
+								/>
+							)}
+						</StyledHeading>
+						<StyledImageMain isEven={isEvenIndex}>
+							<img
+								src={data.Image}
+								width="100%"
+								alt="Landing Image"
+							/>
+						</StyledImageMain>
+					</StyledDiv>
+				);
+			})}
+		</>
+	);
 };
 
-export default index;
+export default InfoLayout;
