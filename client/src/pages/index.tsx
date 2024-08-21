@@ -6,6 +6,7 @@ import Hero from '@/layouts/Hero'
 import Feature from '@/layouts/Feature'
 import Info from '@/layouts/Info'
 import Newsletter from '@/layouts/Newsletter'
+import Footer from '@/layouts/Footer'
 
 
 import WButton from '../theme/WButton';
@@ -49,6 +50,9 @@ function index() {
       </ContainerDiv>
       <ContainerDiv>
         <Newsletter />
+      </ContainerDiv>
+      <ContainerDiv>
+        <Footer />
       </ContainerDiv>
       {/* <WButton
         label="Contact us"
