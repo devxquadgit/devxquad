@@ -2,12 +2,13 @@ import React from "react";
 import styled from "@emotion/styled";
 import WTypo from "@/theme/WTypo";
 import Card from '@/components/Card';
-import featuresData from './featuresData';
+import featureData from './featureData';
 
 const StyledDiv = styled.div`
   width: 100%;
   display: flex;
   margin: 3rem 0;
+  padding-bottom: 40px;
 `;
 
 const StyledHeading = styled.div`
@@ -15,20 +16,26 @@ const StyledHeading = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 80px;
   max-width: calc(100% - 30rem);
 `;
 
-const StyledHeadingMain = styled.div`
+const StyledFeatureMain = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 `;
 
+const StyledFeatureCards = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+`;
+
 const Index = () => {
   return (
     <StyledDiv>
-      <StyledHeadingMain>
+      <StyledFeatureMain>
         <StyledHeading>
           <WTypo
             label="FEATURES"
@@ -47,17 +54,22 @@ const Index = () => {
             style={{ textAlign: 'center' }}
           />
         </StyledHeading>
-        {featuresData.map(({ SVG, Heading, Desc }) => {
-					return (
-						<Card
-							key={Heading}
-							SVG={SVG}
-							Heading={Heading}
-							Desc={Desc}
-						/>
-					)
-				})}
-      </StyledHeadingMain>
+        <StyledFeatureCards>
+          {featureData.map(({ SVG, Heading, Desc }) => {
+            return (
+              <Card
+                key={Heading}
+                SVG={SVG}
+                Heading={Heading}
+                Desc={Desc}
+                style={{
+                  padding: '0 24px'
+                }}
+              />
+            )
+          })}
+        </StyledFeatureCards>
+      </StyledFeatureMain>
     </StyledDiv>
   );
 };

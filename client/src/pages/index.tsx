@@ -5,9 +5,11 @@ import WTag from '@/theme/WTag';
 import TwitterIcon from '../assets/twitter.svg';
 
 import Navbar from '@/components/Navbar'
-import Layout from '@/components/Layout'
-import Layout2 from '@/components/Layout2'
 import Styled from '@emotion/styled';
+
+import Hero from '@/layouts/Hero'
+import Feature from '@/layouts/Feature'
+import Info from '@/layouts/Info'
 
 const ContainerDiv = Styled.div`
   --bs-gutter-x: 2.5rem;
@@ -23,8 +25,8 @@ const ContainerDiv = Styled.div`
   }
 `;
 
-const MarginDiv = Styled.div`
-  padding: 1rem;
+const MarginDiv = Styled.div<{ margin?: string }>`
+  padding: ${({ margin }) => (margin ? margin : "1rem")};
 `;
 
 function index() {
@@ -32,11 +34,14 @@ function index() {
     <div>
       <Navbar />
       <ContainerDiv>
-        <Layout />
+        <Hero />
       </ContainerDiv>
       <MarginDiv />
       <ContainerDiv>
-        <Layout2 />
+        <Feature />
+      </ContainerDiv>
+      <ContainerDiv>
+        <Info />
       </ContainerDiv>
       {/* <WButton
         label="Contact us"
