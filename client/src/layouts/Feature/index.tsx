@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import WTypo from "@/theme/WTypo";
 import Card from '@/components/Card';
-import featuresData from './featuresData';
+import featureData from './featureData';
 
 const StyledDiv = styled.div`
   width: 100%;
@@ -19,7 +19,7 @@ const StyledHeading = styled.div`
   max-width: calc(100% - 30rem);
 `;
 
-const StyledHeadingMain = styled.div`
+const StyledFeatureMain = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -34,7 +34,7 @@ const StyledFeatureCards = styled.div`
 const Index = () => {
   return (
     <StyledDiv>
-      <StyledHeadingMain>
+      <StyledFeatureMain>
         <StyledHeading>
           <WTypo
             label="FEATURES"
@@ -54,7 +54,7 @@ const Index = () => {
           />
         </StyledHeading>
         <StyledFeatureCards>
-          {featuresData.map(({ SVG, Heading, Desc }) => {
+          {featureData.map(({ SVG, Heading, Desc }) => {
             return (
               <Card
                 key={Heading}
@@ -68,7 +68,7 @@ const Index = () => {
             )
           })}
         </StyledFeatureCards>
-      </StyledHeadingMain>
+      </StyledFeatureMain>
     </StyledDiv>
   );
 };
