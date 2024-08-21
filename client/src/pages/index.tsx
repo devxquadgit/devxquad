@@ -5,8 +5,8 @@ import WTag from '@/theme/WTag';
 import TwitterIcon from '../assets/twitter.svg';
 
 import Navbar from '@/components/Navbar'
-import Layout from '@/components/Layout'
-import Layout2 from '@/components/Layout2'
+import Hero from '@/layouts/Hero'
+import Feature from '@/layouts/Feature'
 import Styled from '@emotion/styled';
 
 const ContainerDiv = Styled.div`
@@ -32,11 +32,11 @@ function index() {
     <div>
       <Navbar />
       <ContainerDiv>
-        <Layout />
+        <Hero />
       </ContainerDiv>
       <MarginDiv />
       <ContainerDiv>
-        <Layout2 />
+        <Feature />
       </ContainerDiv>
       {/* <WButton
         label="Contact us"
