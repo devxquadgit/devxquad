@@ -1,9 +1,15 @@
 import { ComponentType } from "react";
 
+export interface Links {
+  slug: string;
+  url: string;
+}
+
 export interface Subheading {
   title: string;
-  links: string[];
+  links: Links[];
 }
+
 
 export interface SocialMedia {
   svg: ComponentType;

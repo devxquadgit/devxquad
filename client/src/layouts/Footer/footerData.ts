@@ -12,34 +12,84 @@ const footerData: IFooterProps = {
 		{
 			title: "Landings",
 			links: [
-				"Sass",
-				"Software Company",
-				"Finance",
-				"Digital Agency",
-				"Conference",
-				"App Template",
+				{
+					slug: "Sass",
+					url: "#"
+				},
+				{
+					slug: "Software Company",
+					url: "#"
+				},
+				{
+					slug: "Finance",
+					url: "#"
+				},
+				{
+					slug: "Digital Agency",
+					url: "#"
+				},
+				{
+					slug: "Conference",
+					url: "#"
+				},
+				{
+					slug: "App Template",
+					url: "#"
+				}
 			],
 		},
 		{
-			title: "Landings",
+			title: "Accounts",
 			links: [
-				"Sass",
-				"Software Company",
-				"Finance",
-				"Digital Agency",
-				"Conference",
-				"App Template",
+				{
+					slug: "Register",
+					url: "#"
+				},
+				{
+					slug: "Login",
+					url: "#"
+				},
+				{
+					slug: "Forgot Password",
+					url: "#"
+				},
+				{
+					slug: "Reset Password",
+					url: "#"
+				},
+				{
+					slug: "Profile",
+					url: "#"
+				}
 			],
 		},
 		{
-			title: "Landings",
+			title: "Resources",
 			links: [
-				"Sass",
-				"Software Company",
-				"Finance",
-				"Digital Agency",
-				"Conference",
-				"App Template",
+				{
+					slug: "Docs",
+					url: "#"
+				},
+				{
+					slug: "Support",
+					url: "#"
+				},
+				{
+					slug: "Changelog",
+					url: "#"
+				},
+				{
+					slug: "Help Center",
+					url: "#"
+				},
+				{
+					slug: "Community",
+					url: "#"
+				},
+				{
+					slug: "Webinars",
+					url: "#"
+				}
 			],
 		},
 	],

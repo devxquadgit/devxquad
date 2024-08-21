@@ -24,7 +24,7 @@ const StyledLinks = Styled.div`
   padding-left: 8.3%;
   width: 55%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
 
 const StyledLinkContainer = Styled.div``;
@@ -77,11 +77,11 @@ const Index: React.FC = () => {
               {subheading.links.map((link, idx) => (
                 <WTypo
                   key={idx}
-                  label={link}
+                  label={link.slug}
                   type="link"
                   color="#64748B"
-                  url="www.google.com"
-                  style={{ marginBottom: '8px' }}
+                  url={link.url}
+                  style={{ marginBottom: '14px' }}
                 />
               ))}
             </StyledLinkContainer>
