@@ -11,9 +11,9 @@ const StyledTag = styled.div<{
 	bgcolor?: string;
 }>`
 	width: ${({ type }) =>
-		type === "pill" ? "7.5rem" : type === "circle-sm" ? "2rem" : type === "circle-lg" ? "54px" : "3rem"};
+		type === "pill" ? "7.5rem" : type === "circle-sm" ? "2rem" : type === "circle-lg" ? "54px" : "40px"};
 	height: ${({ type }) =>
-		type === "pill" ? "2.5rem" : type === "circle-sm" ? "2rem" : type === "circle-lg" ? "54px" : "3rem"};
+		type === "pill" ? "2.5rem" : type === "circle-sm" ? "2rem" : type === "circle-lg" ? "54px" : "40px"};
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -39,6 +39,10 @@ const StyledTag = styled.div<{
 	}
 `;
 
+const StyledLink = styled(Link)`
+	color: inherit;
+`;
+
 const WTag: React.FC<IWTagProps> = ({
 	icon,
 	label,
@@ -47,7 +51,8 @@ const WTag: React.FC<IWTagProps> = ({
 	bordered = false,
 	clickable = false,
 	bgcolor,
-	style
+	style,
+	linkStyle
 }) => {
 
 	return clickable && url ? (
@@ -58,10 +63,10 @@ const WTag: React.FC<IWTagProps> = ({
 			bgcolor={bgcolor}
 			style={style}
 		>
-      <Link href={url} target="_blank">
+      <StyledLink style={linkStyle} href={url} target="_blank">
         {icon}
         {type === "pill" && label && <span>{label}</span>}
-      </Link>
+      </StyledLink>
 		</StyledTag>
 	) : (
     <StyledTag

@@ -7,4 +7,5 @@ export interface IWTagProps {
   clickable?: boolean;   
   bgcolor?: string;  
   style?: React.CSSProperties;
+  linkStyle?: React.CSSProperties;
 }

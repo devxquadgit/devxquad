@@ -1,15 +1,20 @@
 import React from 'react';
+import Styled from '@emotion/styled';
+import Navbar from '@/components/Navbar'
+
+import Hero from '@/layouts/Hero'
+import Feature from '@/layouts/Feature'
+import Info from '@/layouts/Info'
+import Newsletter from '@/layouts/Newsletter'
+import Footer from '@/layouts/Footer'
+
+
 import WButton from '../theme/WButton';
 import WTypo from '../theme/WTypo';
 import WTag from '@/theme/WTag';
 import TwitterIcon from '../assets/twitter.svg';
 
-import Navbar from '@/components/Navbar'
-import Styled from '@emotion/styled';
 
-import Hero from '@/layouts/Hero'
-import Feature from '@/layouts/Feature'
-import Info from '@/layouts/Info'
 
 const ContainerDiv = Styled.div`
   --bs-gutter-x: 2.5rem;
@@ -42,6 +47,12 @@ function index() {
       </ContainerDiv>
       <ContainerDiv>
         <Info />
+      </ContainerDiv>
+      <ContainerDiv>
+        <Newsletter />
+      </ContainerDiv>
+      <ContainerDiv>
+        <Footer />
       </ContainerDiv>
       {/* <WButton
         label="Contact us"

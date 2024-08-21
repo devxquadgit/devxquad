@@ -8,7 +8,7 @@ const StyledTypo = styled(Typography)<{ type?: string; color?: string, bold?: st
 	font-size: ${(props) => getFontStyles(props.type).fontSize};
 	font-family: ${(props) => getFontStyles(props.type).fontFamily};
 	color: ${(props) => props.color || "black"};
-	line-height: ${(props) => props.type === "main-lg" ? 1.25 : props.type === "sub-lg" ? "30px" : "normal"};
+	line-height: ${(props) =>  props.type === "main-lg" ? 1.25 : props.type === "sub-xl" ? 1.4 : props.type === "sub-lg" ? "30px" : "normal"};
 	font-weight: ${(props) => props.bold || "normal"};
 `;
 
@@ -41,6 +41,8 @@ const getFontStyles = (
 			return { fontSize: "52px", fontFamily: "'Caveat', cursive" };
 		case "main-md":
 			return { fontSize: "32px", fontFamily: "'Caveat', cursive" };
+		case "sub-xl":
+			return { fontSize: "32px" };
 		case "sub-lg":
 			return { fontSize: "20px" };
 		case "sub-md":
