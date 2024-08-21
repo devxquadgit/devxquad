@@ -15,6 +15,7 @@ const StyledHeading = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin-bottom: 80px;
   max-width: calc(100% - 30rem);
 `;
 
@@ -23,6 +24,11 @@ const StyledHeadingMain = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+`;
+
+const StyledFeatureCards = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 `;
 
 const Index = () => {
@@ -47,16 +53,21 @@ const Index = () => {
             style={{ textAlign: 'center' }}
           />
         </StyledHeading>
-        {featuresData.map(({ SVG, Heading, Desc }) => {
-					return (
-						<Card
-							key={Heading}
-							SVG={SVG}
-							Heading={Heading}
-							Desc={Desc}
-						/>
-					)
-				})}
+        <StyledFeatureCards>
+          {featuresData.map(({ SVG, Heading, Desc }) => {
+            return (
+              <Card
+                key={Heading}
+                SVG={SVG}
+                Heading={Heading}
+                Desc={Desc}
+                style={{
+                  padding: '0 24px'
+                }}
+              />
+            )
+          })}
+        </StyledFeatureCards>
       </StyledHeadingMain>
     </StyledDiv>
   );

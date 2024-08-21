@@ -16,9 +16,9 @@ const StyledTag = styled.div`
   flex-direction: column;
 `;
 
-const index: React.FC<ICardProps> = ({ SVG, Heading, Desc }) => {
+const index: React.FC<ICardProps> = ({ SVG, Heading, Desc, style }) => {
 	return (
-    <StyledTagDiv>
+    <StyledTagDiv style={style} >
       <StyledTag>
         <WTag
           icon={<SVG />}
