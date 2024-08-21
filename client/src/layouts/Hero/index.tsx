@@ -4,8 +4,8 @@ import WTypo from "@/theme/WTypo";
 import WTag from "@/theme/WTag";
 import WButton from "@/theme/WButton";
 import Img from "@/assets/landing/img1.png";
-import CreditCardIcon from '../../assets/icons/creditcard.svg';
-import MoneyIcon from '../../assets/icons/money.svg';
+import CreditCardIcon from '@/assets/icons/creditcard.svg';
+import MoneyIcon from '@/assets/icons/money.svg';
 
 const StyledDiv = styled.div`
 	width: 100%;
