@@ -40,13 +40,8 @@ function index() {
       <ContainerDiv>
         <Feature />
       </ContainerDiv>
-      <MarginDiv margin='20px'/>
       <ContainerDiv>
-        <Info index={0}/>
-      </ContainerDiv>
-      <MarginDiv margin='50px'/>
-      <ContainerDiv>
-        <Info index={1}/>
+        <Info />
       </ContainerDiv>
       {/* <WButton
         label="Contact us"
