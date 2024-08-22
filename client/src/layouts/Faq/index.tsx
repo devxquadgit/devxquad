@@ -5,8 +5,14 @@ import { IFaqProps } from '@/contracts/IFaqProps';
 import WTypo from '@/theme/WTypo'
 
 
-const StyledFaq = styled.div`
+const StyledFaqMain = styled.div`
   margin-top: 100px;
+  display: flex;
+  justify-content: center;
+`;
+
+const StyledFaq = styled.div`
+  max-width: 950px;
 `;
 
 const StyledFaqHeading = styled.div`
@@ -48,9 +54,8 @@ const ToggleIcon = styled.span<{ isOpen: boolean }>`
   align-items: center;
   width: 30px;
   height: 30px;
-  border: 2px solid #000;
   border-radius: 50%;
-  font-size: 23px;
+  font-size: 30px;
   transition: transform 0.5s ease;
   transform: ${props => (props.isOpen ? 'rotate(45deg)' : 'rotate(0deg)')};
 `;
@@ -63,40 +68,42 @@ const FAQ = () => {
   };
 
   return (
-    <StyledFaq>
-      <StyledFaqHeading>
-        <WTypo
-          label="FAQ"
-          type="sub-sm"
-          color="rgba(184, 11, 10, 1)"
-        />
-        <WTypo
-          label="Frequently asked questions"
-          type="main-md"
-          color="#1e293b"
-        />
-      </StyledFaqHeading>
-      {faqData.map((item: IFaqProps, index: number) => (
-        <FAQItemContainer key={index}>
-          <StyledQuestion isOpen={openIndex === index} onClick={() => toggleFAQ(index)}>
-            <WTypo
-              label={item.question}
-              type="sub-lg"
-              color={openIndex === index ? '#b80b0a' : '#000'}
-            />
-            <ToggleIcon isOpen={openIndex === index}>+</ToggleIcon>
-          </StyledQuestion>
-          <StyledAnswer isOpen={openIndex === index}>
-            <WTypo
-              label={item.answer}
-              type="sub-md"
-              color="#000"
-              style={{lineHeight: '1.6', margin: '1rem 0'}}
-            />
-          </StyledAnswer>
-        </FAQItemContainer>
-      ))}
-    </StyledFaq>
+    <StyledFaqMain>
+      <StyledFaq>  
+        <StyledFaqHeading>
+          <WTypo
+            label="ASK"
+            type="sub-sm"
+            color="rgba(184, 11, 10, 1)"
+          />
+          <WTypo
+            label="Frequently asked questions"
+            type="main-md"
+            color="#1e293b"
+          />
+        </StyledFaqHeading>
+        {faqData.map((item: IFaqProps, index: number) => (
+          <FAQItemContainer key={index}>
+            <StyledQuestion isOpen={openIndex === index} onClick={() => toggleFAQ(index)}>
+              <WTypo
+                label={item.question}
+                type="sub-lg"
+                color={openIndex === index ? '#b80b0a' : '#000'}
+              />
+              <ToggleIcon isOpen={openIndex === index}>+</ToggleIcon>
+            </StyledQuestion>
+            <StyledAnswer isOpen={openIndex === index}>
+              <WTypo
+                label={item.answer}
+                type="sub-md"
+                color="#000"
+                style={{lineHeight: '1.6', margin: '1rem 0'}}
+              />
+            </StyledAnswer>
+          </FAQItemContainer>
+        ))}
+      </StyledFaq> 
+    </StyledFaqMain>
   );
 };
 
