@@ -7,7 +7,7 @@ import Feature from '@/layouts/Feature'
 import Info from '@/layouts/Info'
 import Newsletter from '@/layouts/Newsletter'
 import Footer from '@/layouts/Footer'
-
+import Faq from '@/layouts/Faq';
 
 import WButton from '../theme/WButton';
 import WTypo from '../theme/WTypo';
@@ -48,6 +48,13 @@ function index() {
       <ContainerDiv>
         <Info />
       </ContainerDiv>
+      
+      {/* Testing */}
+      <ContainerDiv>
+        <Faq />
+      </ContainerDiv>
+      {/* Testing */}
+      
       <ContainerDiv>
         <Newsletter />
       </ContainerDiv>

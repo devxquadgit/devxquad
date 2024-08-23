@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Logo from '@/assets/logo/logo.svg';
 import WTypo from '@/theme/WTypo';
 import WButton from '@/theme/WButton';
+import Eyes from '@/components/Eyes'
 
 const StyledNav = styled.nav`
   display: flex;
@@ -26,10 +27,13 @@ const LogoWrapper = styled(Logo)`
 `;
 
 const navLinks = [
-  { label: 'Projects', url: 'https://www.google.com' },
-  { label: 'Services', url: 'https://www.google.com' },
-  { label: 'About Us', url: 'https://www.google.com' },
-  { label: 'Our Team', url: 'https://www.google.com' },
+  { label: 'Projects', url: '#' },
+  { label: 'Services', url: '#' },
+];
+
+const navLinks2 = [
+  { label: 'About Us', url: '#' },
+  { label: 'Our Team', url: '#' },
 ];
 
 const Index: React.FC = () => {
@@ -38,6 +42,10 @@ const Index: React.FC = () => {
       <LogoWrapper />
       <StyledNavLinks>
         {navLinks.map(({ label, url }) => (
+          <WTypo key={label} label={label} type="link" url={url} color="#64748b" />
+        ))}
+        <Eyes />
+        {navLinks2.map(({ label, url }) => (
           <WTypo key={label} label={label} type="link" url={url} color="#64748b" />
         ))}
       </StyledNavLinks>
