@@ -11,6 +11,11 @@ const StyledDiv = styled.div`
 	width: 100%;
 	display: flex;
 	margin: 3rem 0;
+
+  @media (max-width: 900px) {
+		align-items: center;
+    flex-direction: column;
+  }
 `;
 
 const StyledContent = styled.div`
@@ -20,6 +25,11 @@ const StyledContent = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding: 0 1rem;
+
+	@media (max-width: 900px) {
+		width: 100%;
+    max-width: 720px;
+  }
 `;
 
 const StyledImageMain = styled.div`
@@ -28,6 +38,12 @@ const StyledImageMain = styled.div`
 	padding: 1.5rem;
 	border-radius: 1rem;
 	background-color: #f8fafc;
+
+	@media (max-width: 900px) {
+		margin-top: 2rem;
+		width: 100%;
+    max-width: 680px;
+  }
 `;
 
 const StyledImage = styled.img`
@@ -42,6 +58,10 @@ const StyledBadge = styled.div`
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   border: 1px solid #e4a1a1;
+
+	@media (max-width: 900px) {
+		align-self: center;
+  }
   
   & div p{
     font-weight: 700;
@@ -53,6 +73,10 @@ const StyledHeading = styled.div`
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 2rem;
+
+	@media (max-width: 900px) {
+		text-align: center;
+  }
 `;
 
 const StyledTagDiv = styled.div`
@@ -67,6 +91,13 @@ const StyledTag = styled.div`
 		gap: 8px;
 `;
 
+const ButtonWrapper = styled.div`
+  @media (max-width: 900px) {
+		width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+`;
 
 const index = () => {
 	return (
@@ -93,14 +124,16 @@ const index = () => {
 						color="#64748b"
 					/>
 				</StyledHeading>
-				<WButton
-					label="Contact us"
-					bgcolor="#b80b0a"
-					textColor="white"
-					width="115px"
-					rounded
-					onClick={() => console.log("Button clicked!")}
-				/>
+				<ButtonWrapper>
+					<WButton
+						label="Contact us"
+						bgcolor="#b80b0a"
+						textColor="white"
+						width="115px"
+						rounded
+						onClick={() => console.log("Button clicked!")}
+					/>
+				</ButtonWrapper>
 				<StyledTagDiv>
 					<StyledTag>
 						<WTag
