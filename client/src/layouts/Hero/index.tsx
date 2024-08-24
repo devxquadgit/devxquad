@@ -30,6 +30,10 @@ const StyledContent = styled.div`
 		width: 100%;
     max-width: 720px;
   }
+
+	@media (max-width: 475px) {
+    padding: 0;
+  }
 `;
 
 const StyledImageMain = styled.div`
@@ -85,9 +89,14 @@ const StyledHeading = styled.div`
 `;
 
 const StyledTagDiv = styled.div`
-    margin: 2.5rem 0;
-		display: flex;
-		gap: 24px;
+	margin: 2.5rem 0;
+	display: flex;
+	gap: 24px;
+
+	@media (max-width: 475px) {
+		justify-content: center;
+		width: 100%;
+	}
 `;
 
 const StyledTag = styled.div`
@@ -139,7 +148,7 @@ const index = () => {
 						onClick={() => console.log("Button clicked!")}
 					/>
 				</ButtonWrapper>
-				<StyledTagDiv>
+				{/* <StyledTagDiv>
 					<StyledTag>
 						<WTag
 							icon={<CreditCardIcon/>}
@@ -164,7 +173,7 @@ const index = () => {
 							color="#64748b"
 						/>
 					</StyledTag>
-				</StyledTagDiv>
+				</StyledTagDiv> */}
 			</StyledContent>
 			<StyledImageMain>
 				<StyledImage src={Img.src} width="100%" alt="Landing Image" />

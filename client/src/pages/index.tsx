@@ -25,11 +25,11 @@ const ContainerDiv = Styled.div`
   padding-right: calc(var(--bs-gutter-x)* .5);
   width: 100%;
   
-  @media (min-width: 1400px) {
+  @media (max-width: 1400px) {
     max-width: 1320px;
   }
   
-  @media (min-width: 767px) {
+  @media (max-width: 767px) {
     max-width: 540px;
   }
 `;

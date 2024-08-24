@@ -17,7 +17,7 @@ const StyledNewsletterDiv = styled.div`
     text-align: center;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 475px) {
     margin-top: 80px;
     padding: 50px 30px;
   }
@@ -37,7 +37,7 @@ const StyledForm = styled.div`
     width: 100%;
     
     & input {
-      max-width: 100%;
+      width: 100%;
     }
   }
 
@@ -65,7 +65,7 @@ const ButtonLargeWrapper = styled.div`
 `;
 
 const ButtonSmallWrapper = styled.div`
-  display: block;
+  display: none;
 
   @media (max-width: 550px) {
     display: block;

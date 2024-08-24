@@ -70,7 +70,7 @@ const StyledLinkContainer = Styled.div``;
 
 const StyledBottom = Styled.div`
   margin-top: 48px;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;

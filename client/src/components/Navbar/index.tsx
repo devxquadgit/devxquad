@@ -51,6 +51,10 @@ const StyledMenu = styled.div`
     background-color: #fff;
     box-shadow: 0 0.125rem 0.25rem rgba(2, 6, 23, 0.075);
   }
+
+  @media (max-width: 475px) {
+    padding: 0.5rem 30px;
+  }
 `;
 
 const navLinks = [
