@@ -8,9 +8,14 @@ const StyledTagDiv = styled.div<{ component?: string }>`
   margin: 2.5rem 0;
   display: flex;
   gap: 24px;
+  padding: ${(props) => props.component === "Feature" && "0 24px"};
 
   @media (max-width: 768px) {
   	margin: ${(props) => props.component === "Feature" ? "1.2rem 0" : "2.5rem 0"};
+  }
+
+  @media (max-width: 767px) {
+    padding: ${(props) => props.component === "Feature" && "0px"};
   }
 `;
 
@@ -19,7 +24,7 @@ const StyledTag = styled.div<{ component?: string }>`
   align-items: flex-start;
   flex-direction: column;
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
   	align-items: ${(props) => props.component === "Feature" ? "center" : "flex-start"};
   	text-align: ${(props) => props.component === "Feature" ? "center" : "left"};
   }

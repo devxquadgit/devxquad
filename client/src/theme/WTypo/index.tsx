@@ -14,6 +14,10 @@ const StyledTypo = styled(Typography)<{ type?: string; color?: string, bold?: st
 	@media (max-width: 900px) {
     font-size: ${(props) => props.type === "main-lg" ? "47px" : props.type === "sub-xl" ? "29px" : getFontStyles(props.type).fontSize};
   }
+
+	@media (max-width: 768px) {
+    font-size: ${(props) => props.type === "main-lg" ? "44px" : props.type === "sub-xl" ? "29px" : getFontStyles(props.type).fontSize};
+  }
 `;
 
 const StyledLink = styled(Link)<{ color?: string, type?: string }>`

@@ -27,6 +27,11 @@ const StyledHeading = styled.div`
     max-width: calc(100% - 6rem);
     margin-bottom: 20px;
   }
+
+  @media (max-width: 767px) {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 `;
 
 const StyledFeatureMain = styled.div`
@@ -45,8 +50,8 @@ const StyledFeatureCards = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
   
-  @media (max-width: 768px) {
-    margin: 0 2rem;
+  @media (max-width: 767px) {
+    margin: 0;
     grid-template-columns: repeat(1, 1fr);
   }
 `;
@@ -82,9 +87,6 @@ const Index = () => {
                 SVG={SVG}
                 Heading={Heading}
                 Desc={Desc}
-                style={{
-                  padding: '0 24px'
-                }}
               />
             )
           })}

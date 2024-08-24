@@ -11,6 +11,10 @@ const StyledDiv = styled.div`
 	flex-direction: row;
 	align-items: center;
 	margin-top: 100px;
+
+	@media (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledHeading = styled.div<{ isEven: boolean }>`
@@ -22,6 +26,11 @@ const StyledHeading = styled.div<{ isEven: boolean }>`
 
 	@media (max-width: 1024px) {
 		width: 42.5%;
+  }
+
+	@media (max-width: 767px) {
+		order: 0;
+    width: 100%;
   }
 `;
 
@@ -37,6 +46,12 @@ const StyledImageMain = styled.div<{ isEven: boolean }>`
 
 	@media (max-width: 1024px) {
 		margin: 0;
+  }
+	
+	@media (max-width: 767px) {
+		padding: 0;
+		padding-top: 2rem;
+    width: 100%;
   }
 `;
 

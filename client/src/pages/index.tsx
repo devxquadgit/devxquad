@@ -28,6 +28,10 @@ const ContainerDiv = Styled.div`
   @media (min-width: 1400px) {
     max-width: 1320px;
   }
+  
+  @media (min-width: 767px) {
+    max-width: 540px;
+  }
 `;
 
 const MarginDiv = Styled.div<{ margin?: string }>`
