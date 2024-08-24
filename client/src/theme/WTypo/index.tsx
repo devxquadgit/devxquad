@@ -10,6 +10,10 @@ const StyledTypo = styled(Typography)<{ type?: string; color?: string, bold?: st
 	color: ${(props) => props.color || "black"};
 	line-height: ${(props) =>  props.type === "main-lg" ? 1.25 : props.type === "sub-xl" ? 1.4 : props.type === "sub-lg" ? "30px" : "normal"};
 	font-weight: ${(props) => props.bold || "normal"};
+
+	@media (max-width: 900px) {
+    font-size: ${(props) => props.type === "main-lg" ? "47px" : props.type === "sub-xl" ? "29px" : getFontStyles(props.type).fontSize};
+  }
 `;
 
 const StyledLink = styled(Link)<{ color?: string, type?: string }>`
@@ -35,7 +39,7 @@ const StyledLink = styled(Link)<{ color?: string, type?: string }>`
 
 const getFontStyles = (
 	type?: string
-): { fontSize?: string; fontFamily?: string, bold?:string } => {
+): { fontSize?: string; fontFamily?: string } => {
 	switch (type) {
 		case "main-lg":
 			return { fontSize: "52px", fontFamily: "'Caveat', cursive" };
@@ -45,14 +49,11 @@ const getFontStyles = (
 			return { fontSize: "32px" };
 		case "sub-lg":
 			return { fontSize: "20px" };
-		case "sub-md":
-			return { fontSize: "16px" };
 		case "sub-sm":
 			return { fontSize: "14px" };
+		case "sub-md":
 		case "link":
-			return { fontSize: "16px" };
 		case "arrow-link":
-			return { fontSize: "16px" };
 		default:
 			return { fontSize: "16px" };
 	}

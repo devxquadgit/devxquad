@@ -24,6 +24,12 @@ const StyledForm = styled.div`
   gap: 0.8rem;
 `;
 
+const SubHeadingWrapper = styled.div`
+	@media (max-width: 900px) {
+    max-width: 37rem;
+  }
+`;
+
 const index = () => {
 
   const [inputValue, setInputValue] = useState<string>('');
@@ -40,11 +46,14 @@ const index = () => {
 				color="#050038"
         style={{fontWeight: '600', letterSpacing: '-.03em', marginBottom: '4px'}}
 			/>
-			<WTypo
-				label="Exciting updates are on the way! 🚀 Sign up for our newsletter, and we'll keep you posted with new stuff. 📧"
-				type="sub-md"
-				color="#050038"
-			/>
+      <SubHeadingWrapper>
+
+        <WTypo
+          label="Exciting updates are on the way! 🚀 Sign up for our newsletter, and we'll keep you posted with new stuff. 📧"
+          type="sub-md"
+          color="#050038"
+        />
+      </SubHeadingWrapper>
       <StyledForm>
         <WInput
           type="email"
