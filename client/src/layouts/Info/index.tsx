@@ -19,6 +19,10 @@ const StyledDiv = styled.div`
 	@media (max-width: 550px) {
     margin-top: 60px;
   }
+
+	@media (max-width: 425px) {
+    margin-top: 50px;
+  }
 `;
 
 const StyledHeading = styled.div<{ isEven: boolean }>`

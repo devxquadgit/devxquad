@@ -9,6 +9,10 @@ const StyledFaqMain = styled.div`
   margin-top: 100px;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 425px) {
+    margin-top: 80px;
+  }
 `;
 
 const StyledFaq = styled.div`

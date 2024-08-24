@@ -18,8 +18,10 @@ const StyledNewsletterDiv = styled.div`
   }
 
   @media (max-width: 425px) {
+    margin-top: 80px;
     padding: 50px 30px;
   }
+
 `;
 
 const StyledForm = styled.div`
@@ -38,6 +40,10 @@ const StyledForm = styled.div`
       max-width: 100%;
     }
   }
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+  }
 `;
 
 const SubHeadingWrapper = styled.div`
@@ -52,6 +58,10 @@ const ButtonLargeWrapper = styled.div`
   @media (max-width: 550px) {
     display: none;
   }
+
+  @media (max-width: 375px) {
+    display: block;
+  }
 `;
 
 const ButtonSmallWrapper = styled.div`
@@ -59,6 +69,10 @@ const ButtonSmallWrapper = styled.div`
 
   @media (max-width: 550px) {
     display: block;
+  }
+
+  @media (max-width: 375px) {
+    display: none;
   }
 `;
 

@@ -9,6 +9,10 @@ const StyledDiv = styled.div`
   display: flex;
   margin-top: 100px;
   padding-bottom: 40px;
+
+  @media (max-width: 425px) {
+    margin-top: 80px;
+  }
 `;
 
 const StyledHeading = styled.div`

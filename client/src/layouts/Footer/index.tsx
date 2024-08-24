@@ -9,6 +9,10 @@ const StyledFooter = Styled.div`
   margin-top: 100px;  
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 425px) {
+    margin-top: 80px;
+  }
 `;
 
 const StyledTop = Styled.div`
