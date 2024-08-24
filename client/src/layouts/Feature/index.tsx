@@ -22,6 +22,11 @@ const StyledHeading = styled.div`
   @media (max-width: 1024px) {
     max-width: calc(100% - 19rem);
   }
+
+  @media (max-width: 768px) {
+    max-width: calc(100% - 6rem);
+    margin-bottom: 20px;
+  }
 `;
 
 const StyledFeatureMain = styled.div`
@@ -34,6 +39,16 @@ const StyledFeatureMain = styled.div`
 const StyledFeatureCards = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 900px) {
+    margin: 0 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media (max-width: 768px) {
+    margin: 0 2rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const Index = () => {
@@ -62,6 +77,7 @@ const Index = () => {
           {featureData.map(({ SVG, Heading, Desc }) => {
             return (
               <Card
+                Component="Feature"
                 key={Heading}
                 SVG={SVG}
                 Heading={Heading}
