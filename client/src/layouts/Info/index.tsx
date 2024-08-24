@@ -15,6 +15,10 @@ const StyledDiv = styled.div`
 	@media (max-width: 767px) {
     flex-direction: column;
   }
+
+	@media (max-width: 550px) {
+    margin-top: 60px;
+  }
 `;
 
 const StyledHeading = styled.div<{ isEven: boolean }>`

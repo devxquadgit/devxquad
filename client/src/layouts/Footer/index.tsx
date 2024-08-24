@@ -19,6 +19,10 @@ const StyledTop = Styled.div`
     gap: 2rem;
     justify-content: space-evenly;
   }
+
+  @media (max-width: 425px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledInfo = Styled.div`
@@ -26,6 +30,10 @@ const StyledInfo = Styled.div`
    
   @media (max-width: 850px) {
     width: 50%;
+  }
+
+  @media (max-width: 425px) {
+    width: 100%;
   }
 `;
 
@@ -48,7 +56,9 @@ const StyledCollapsedLinks = Styled.div`
   display: none;
   
   @media (max-width: 850px) {
-    display: block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
 `;
 
@@ -60,6 +70,12 @@ const StyledBottom = Styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
 `;
 
 const StyledCopyright = Styled.div``;

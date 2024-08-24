@@ -16,17 +16,49 @@ const StyledNewsletterDiv = styled.div`
   & p {
     text-align: center;
   }
+
+  @media (max-width: 425px) {
+    padding: 50px 30px;
+  }
 `;
 
 const StyledForm = styled.div`
   margin-top: 32px;
 	display: flex;
   gap: 0.8rem;
+
+  & input {
+    width: 20rem;
+  }
+
+  @media (max-width: 550px) {
+    width: 100%;
+    
+    & input {
+      max-width: 100%;
+    }
+  }
 `;
 
 const SubHeadingWrapper = styled.div`
 	@media (max-width: 900px) {
     max-width: 37rem;
+  }
+`;
+
+const ButtonLargeWrapper = styled.div`
+  display: block;
+
+  @media (max-width: 550px) {
+    display: none;
+  }
+`;
+
+const ButtonSmallWrapper = styled.div`
+  display: block;
+
+  @media (max-width: 550px) {
+    display: block;
   }
 `;
 
@@ -60,17 +92,30 @@ const index = () => {
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Enter your email"
-          style={{height: '38px', textAlign: 'center', width: '20rem'}}
+          style={{height: '38px', textAlign: 'center'}}
         />
-        <WButton
-          label="Subscribe"
-          bgcolor="#0f172a"
-          textColor="white"
-          width="115px"
-          rounded
-          style={{height: '38px'}}
-          onClick={() => console.log('Button clicked!')}
-        /> 
+        <ButtonLargeWrapper>
+          <WButton
+            label="Subscribe"
+            bgcolor="#0f172a"
+            textColor="white"
+            width="115px"
+            rounded
+            style={{height: '38px'}}
+            onClick={() => console.log('Button clicked!')}
+          /> 
+        </ButtonLargeWrapper>
+        <ButtonSmallWrapper>
+          <WButton
+            label=">"
+            bgcolor="#0f172a"
+            textColor="white"
+            width="10px"
+            rounded
+            style={{height: '38px'}}
+            onClick={() => console.log('Button clicked!')}
+          /> 
+        </ButtonSmallWrapper>
       </StyledForm>
 		</StyledNewsletterDiv>
 	);
