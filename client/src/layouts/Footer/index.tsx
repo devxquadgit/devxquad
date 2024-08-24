@@ -25,6 +25,10 @@ const StyledLinks = Styled.div`
   width: 55%;
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 1024px) {
+    padding-left: 5%;
+  }
 `;
 
 const StyledLinkContainer = Styled.div``;

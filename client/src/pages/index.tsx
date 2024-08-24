@@ -41,7 +41,6 @@ function index() {
       <ContainerDiv>
         <Hero />
       </ContainerDiv>
-      <MarginDiv />
       <ContainerDiv>
         <Feature />
       </ContainerDiv>

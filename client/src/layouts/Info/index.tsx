@@ -19,6 +19,10 @@ const StyledHeading = styled.div<{ isEven: boolean }>`
 	padding: 0 1rem;
 	width: ${({ isEven }) => (isEven ? "40.5%" : "42.5%")};
 	order: ${({ isEven }) => (isEven ? "0" : "1")};
+
+	@media (max-width: 1024px) {
+		width: 42.5%;
+  }
 `;
 
 const StyledImageMain = styled.div<{ isEven: boolean }>`
@@ -26,6 +30,14 @@ const StyledImageMain = styled.div<{ isEven: boolean }>`
 	padding-left: ${({ isEven }) => (isEven ? "8.3%" : "0")};
 	padding-right: ${({ isEven }) => (isEven ? "0" : "6.2%")};
 	margin: 0 1rem;
+
+	& img {
+		max-width: 624px;
+	}
+
+	@media (max-width: 1024px) {
+		margin: 0;
+  }
 `;
 
 const StyledPoints = styled.div`

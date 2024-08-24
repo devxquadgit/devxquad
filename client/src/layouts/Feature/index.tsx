@@ -7,7 +7,7 @@ import featureData from './featureData';
 const StyledDiv = styled.div`
   width: 100%;
   display: flex;
-  margin: 3rem 0;
+  margin-top: 100px;
   padding-bottom: 40px;
 `;
 
@@ -18,6 +18,10 @@ const StyledHeading = styled.div`
   gap: 1rem;
   margin-bottom: 80px;
   max-width: calc(100% - 30rem);
+
+  @media (max-width: 1024px) {
+    max-width: calc(100% - 19rem);
+  }
 `;
 
 const StyledFeatureMain = styled.div`

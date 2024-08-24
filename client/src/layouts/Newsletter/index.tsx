@@ -12,6 +12,10 @@ const StyledNewsletterDiv = styled.div`
   flex-direction: column;
   align-items: center;
   background: linear-gradient(180deg, #FFDD66, #FFB902 47.92%, #E6A200);
+  
+  & p {
+    text-align: center;
+  }
 `;
 
 const StyledForm = styled.div`

@@ -39,6 +39,11 @@ const StyledImageMain = styled.div`
 	border-radius: 1rem;
 	background-color: #f8fafc;
 
+	@media (max-width: 1024px) {
+		height: 100%;
+    align-self: center;
+  }
+
 	@media (max-width: 900px) {
 		margin-top: 2rem;
 		width: 100%;
