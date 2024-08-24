@@ -42,6 +42,10 @@ const StyledQuestion = styled.div<{ isOpen: boolean }>`
   padding: 10px 30px;
   transition: color 0.3s ease;
   color: ${props => (props.isOpen ? '#b80b0a' : '#000')};
+
+  @media (max-width: 425px) {
+    padding: 10px;
+  }
 `;
 
 const StyledAnswer = styled.div<{ isOpen: boolean }>`
@@ -50,6 +54,10 @@ const StyledAnswer = styled.div<{ isOpen: boolean }>`
   padding-left: 30px;
   padding-right: 80px;
   transition: max-height 0.3s ease, padding 0.3s ease;
+  
+  @media (max-width: 425px) {
+    padding-left: 10px;
+  }
 `;
 
 const ToggleIcon = styled.span<{ isOpen: boolean }>`
@@ -62,6 +70,10 @@ const ToggleIcon = styled.span<{ isOpen: boolean }>`
   font-size: 30px;
   transition: transform 0.5s ease;
   transform: ${props => (props.isOpen ? 'rotate(45deg)' : 'rotate(0deg)')};
+
+  @media (max-width: 425px) {
+    font-size: 22px;
+  }
 `;
 
 const FAQ = () => {
@@ -90,6 +102,7 @@ const FAQ = () => {
           <FAQItemContainer key={index}>
             <StyledQuestion isOpen={openIndex === index} onClick={() => toggleFAQ(index)}>
               <WTypo
+                Component="Faq"
                 label={item.question}
                 type="sub-lg"
                 color={openIndex === index ? '#b80b0a' : '#000'}
@@ -98,6 +111,7 @@ const FAQ = () => {
             </StyledQuestion>
             <StyledAnswer isOpen={openIndex === index}>
               <WTypo
+                Component="Faq"
                 label={item.answer}
                 type="sub-md"
                 color="#000"
