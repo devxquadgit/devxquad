@@ -11,6 +11,18 @@ const StyledDiv = styled.div`
 	flex-direction: row;
 	align-items: center;
 	margin-top: 100px;
+
+	@media (max-width: 767px) {
+    flex-direction: column;
+  }
+
+	@media (max-width: 550px) {
+    margin-top: 60px;
+  }
+
+	@media (max-width: 425px) {
+    margin-top: 50px;
+  }
 `;
 
 const StyledHeading = styled.div<{ isEven: boolean }>`
@@ -19,6 +31,15 @@ const StyledHeading = styled.div<{ isEven: boolean }>`
 	padding: 0 1rem;
 	width: ${({ isEven }) => (isEven ? "40.5%" : "42.5%")};
 	order: ${({ isEven }) => (isEven ? "0" : "1")};
+
+	@media (max-width: 1024px) {
+		width: 42.5%;
+  }
+
+	@media (max-width: 767px) {
+		order: 0;
+    width: 100%;
+  }
 `;
 
 const StyledImageMain = styled.div<{ isEven: boolean }>`
@@ -26,6 +47,20 @@ const StyledImageMain = styled.div<{ isEven: boolean }>`
 	padding-left: ${({ isEven }) => (isEven ? "8.3%" : "0")};
 	padding-right: ${({ isEven }) => (isEven ? "0" : "6.2%")};
 	margin: 0 1rem;
+
+	& img {
+		max-width: 624px;
+	}
+
+	@media (max-width: 1024px) {
+		margin: 0;
+  }
+	
+	@media (max-width: 767px) {
+		padding: 0;
+		padding-top: 2rem;
+    width: 100%;
+  }
 `;
 
 const StyledPoints = styled.div`

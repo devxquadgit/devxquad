@@ -4,15 +4,28 @@ import { IWTypoProps } from "@/contracts/IWTypoProps";
 import { Typography } from "@mui/material";
 import Link from "next/link";
 
-const StyledTypo = styled(Typography)<{ type?: string; color?: string, bold?: string }>`
+const StyledTypo = styled(Typography)<{ component?: string, type?: string; color?: string, bold?: string }>`
 	font-size: ${(props) => getFontStyles(props.type).fontSize};
 	font-family: ${(props) => getFontStyles(props.type).fontFamily};
 	color: ${(props) => props.color || "black"};
 	line-height: ${(props) =>  props.type === "main-lg" ? 1.25 : props.type === "sub-xl" ? 1.4 : props.type === "sub-lg" ? "30px" : "normal"};
 	font-weight: ${(props) => props.bold || "normal"};
+
+	@media (max-width: 900px) {
+    font-size: ${(props) => props.type === "main-lg" ? "47px" : props.type === "sub-xl" ? "29px" : getFontStyles(props.type).fontSize};
+  }
+
+	@media (max-width: 768px) {
+    font-size: ${(props) => props.type === "main-lg" ? "44px" : props.type === "sub-xl" ? "29px" : getFontStyles(props.type).fontSize};
+  }
+
+	@media (max-width: 425px) {
+    font-size: ${(props) => props.component === "Faq" && props.type === "sub-lg" && "18px"};
+    font-size: ${(props) => props.component === "Faq" && props.type === "sub-md" && "14px"};
+  }
 `;
 
-const StyledLink = styled(Link)<{ color?: string, type?: string }>`
+const StyledLink = styled(Link)<{ component?: string, color?: string, type?: string }>`
 	color: ${(props) => props.color || "black"};
 	text-decoration: none;
 	position: relative;
@@ -35,7 +48,7 @@ const StyledLink = styled(Link)<{ color?: string, type?: string }>`
 
 const getFontStyles = (
 	type?: string
-): { fontSize?: string; fontFamily?: string, bold?:string } => {
+): { fontSize?: string; fontFamily?: string } => {
 	switch (type) {
 		case "main-lg":
 			return { fontSize: "52px", fontFamily: "'Caveat', cursive" };
@@ -45,36 +58,33 @@ const getFontStyles = (
 			return { fontSize: "32px" };
 		case "sub-lg":
 			return { fontSize: "20px" };
-		case "sub-md":
-			return { fontSize: "16px" };
 		case "sub-sm":
 			return { fontSize: "14px" };
+		case "sub-md":
 		case "link":
-			return { fontSize: "16px" };
 		case "arrow-link":
-			return { fontSize: "16px" };
 		default:
 			return { fontSize: "16px" };
 	}
 };
 
-const index: React.FC<IWTypoProps> = ({ label, type, color, url, bold, style }) => {
+const index: React.FC<IWTypoProps> = ({ Component, label, type, color, url, bold, style }) => {
 	return (
 		<div>
 			{type === "link" && url ? (
-				<StyledTypo variant="body1" type={type} color={color} bold={bold} style={style}>
-					<StyledLink href={url} type={type} color={color} target="_blank">
+				<StyledTypo variant="body1" component={Component} type={type} color={color} bold={bold} style={style}>
+					<StyledLink href={url} component={Component} type={type} color={color} target="_blank">
 						{label}
 					</StyledLink>
 				</StyledTypo>
 			) : type === "arrow-link" && url ? (
-				<StyledTypo variant="body1" type={type} color={color} bold={bold} style={style}>
-					<StyledLink href={url} type={type} color={color} target="_blank">
+				<StyledTypo variant="body1" component={Component} type={type} color={color} bold={bold} style={style}>
+					<StyledLink href={url} component={Component} type={type} color={color} target="_blank">
 						{label}
 					</StyledLink>
 				</StyledTypo>
 			) : (
-				<StyledTypo variant="body1" type={type} color={color} bold={bold} style={style}>
+				<StyledTypo variant="body1" component={Component} type={type} color={color} bold={bold} style={style}>
 					{label}
 				</StyledTypo>
 			)}

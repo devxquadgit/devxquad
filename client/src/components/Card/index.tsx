@@ -4,22 +4,36 @@ import WTypo from "@/theme/WTypo";
 import WTag from "@/theme/WTag";
 import { ICardProps } from "@/contracts/ICardProps"; 
 
-const StyledTagDiv = styled.div`
+const StyledTagDiv = styled.div<{ component?: string }>`
   margin: 2.5rem 0;
   display: flex;
   gap: 24px;
+  padding: ${(props) => props.component === "Feature" && "0 24px"};
+
+  @media (max-width: 768px) {
+  	margin: ${(props) => props.component === "Feature" ? "1.2rem 0" : "2.5rem 0"};
+  }
+
+  @media (max-width: 767px) {
+    padding: ${(props) => props.component === "Feature" && "0px"};
+  }
 `;
 
-const StyledTag = styled.div`
+const StyledTag = styled.div<{ component?: string }>`
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+
+  @media (max-width: 767px) {
+  	align-items: ${(props) => props.component === "Feature" ? "center" : "flex-start"};
+  	text-align: ${(props) => props.component === "Feature" ? "center" : "left"};
+  }
 `;
 
-const index: React.FC<ICardProps> = ({ SVG, Heading, Desc, style }) => {
+const index: React.FC<ICardProps> = ({ Component, SVG, Heading, Desc, style }) => {
 	return (
-    <StyledTagDiv style={style} >
-      <StyledTag>
+    <StyledTagDiv style={style} component={Component}>
+      <StyledTag component={Component}>
         <WTag
           icon={<SVG />}
           type="circle-lg"
