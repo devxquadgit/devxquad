@@ -25,7 +25,7 @@ const ContainerDiv = Styled.div`
   padding-right: calc(var(--bs-gutter-x)* .5);
   width: 100%;
   
-  @media (max-width: 1400px) {
+  @media (min-width: 1400px) {
     max-width: 1320px;
   }
   
