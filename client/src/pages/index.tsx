@@ -29,7 +29,7 @@ const ContainerDiv = Styled.div`
     max-width: 1320px;
   }
   
-  @media (min-width: 767px) {
+  @media (max-width: 767px) {
     max-width: 540px;
   }
 `;

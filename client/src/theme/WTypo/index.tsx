@@ -19,9 +19,11 @@ const StyledTypo = styled(Typography)<{ component?: string, type?: string; color
     font-size: ${(props) => props.type === "main-lg" ? "44px" : props.type === "sub-xl" ? "29px" : getFontStyles(props.type).fontSize};
   }
 
-	@media (max-width: 425px) {
-    font-size: ${(props) => props.component === "Faq" && props.type === "sub-lg" && "18px"};
-    font-size: ${(props) => props.component === "Faq" && props.type === "sub-md" && "14px"};
+	@media (max-width: 475px) {
+		text-align: ${(props) => props.type === "main-md" && "center"}; 	
+		font-weight: ${(props) => props.type === "main-md" && "550"}; 	
+    font-size: ${(props) => props.component === "Faq" && props.type === "sub-lg" && "16px"};
+    font-size: ${(props) => props.component === "Faq" && props.type === "sub-md" && "16px"};
   }
 `;
 

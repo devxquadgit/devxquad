@@ -46,7 +46,6 @@ const StyledImageMain = styled.div<{ isEven: boolean }>`
 	width: ${({ isEven }) => (isEven ? "57%" : "55%")};
 	padding-left: ${({ isEven }) => (isEven ? "8.3%" : "0")};
 	padding-right: ${({ isEven }) => (isEven ? "0" : "6.2%")};
-	margin: 0 1rem;
 
 	& img {
 		max-width: 624px;

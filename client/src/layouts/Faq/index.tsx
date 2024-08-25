@@ -31,6 +31,12 @@ const FAQItemContainer = styled.div`
   margin-bottom: 15px;
   border-bottom: 1px solid lightgray;
   padding-bottom: 15px;
+
+
+  @media (max-width: 475px) {
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+  }
 `;
 
 const StyledQuestion = styled.div<{ isOpen: boolean }>`
@@ -57,6 +63,7 @@ const StyledAnswer = styled.div<{ isOpen: boolean }>`
   
   @media (max-width: 425px) {
     padding-left: 10px;
+    padding-right: 30px;
   }
 `;
 
@@ -64,6 +71,7 @@ const ToggleIcon = styled.span<{ isOpen: boolean }>`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 550;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -71,8 +79,8 @@ const ToggleIcon = styled.span<{ isOpen: boolean }>`
   transition: transform 0.5s ease;
   transform: ${props => (props.isOpen ? 'rotate(45deg)' : 'rotate(0deg)')};
 
-  @media (max-width: 425px) {
-    font-size: 22px;
+  @media (max-width: 475px) {
+    font-size: 20px;
   }
 `;
 
@@ -105,6 +113,7 @@ const FAQ = () => {
                 Component="Faq"
                 label={item.question}
                 type="sub-lg"
+                bold="550"
                 color={openIndex === index ? '#b80b0a' : '#000'}
               />
               <ToggleIcon isOpen={openIndex === index}>+</ToggleIcon>

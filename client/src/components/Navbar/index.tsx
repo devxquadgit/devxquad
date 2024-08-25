@@ -5,6 +5,7 @@ import Menu from '@/assets/icons/menu.svg';
 import WTypo from '@/theme/WTypo';
 import WButton from '@/theme/WButton';
 import Eyes from '@/components/Eyes'
+import { useGlobalStore } from '@/store';
 
 const StyledNav = styled.nav`
   display: flex;
@@ -51,6 +52,10 @@ const StyledMenu = styled.div`
     background-color: #fff;
     box-shadow: 0 0.125rem 0.25rem rgba(2, 6, 23, 0.075);
   }
+
+  @media (max-width: 475px) {
+    padding: 0.5rem 30px;
+  }
 `;
 
 const navLinks = [
@@ -63,7 +68,14 @@ const navLinks2 = [
   { label: 'Our Team', url: '#' },
 ];
 
-const Index: React.FC = () => {
+const index = () => {
+
+  const Update = {
+		Global: {
+			isSidebarClosed: useGlobalStore((State) => State.setIsSidebarClosed)
+		}
+	};
+
   return (
     <>
       <StyledNav>
@@ -88,10 +100,12 @@ const Index: React.FC = () => {
       </StyledNav>
       <StyledMenu>
         <LogoWrapper />
-        <MenuWrapper />
+        <div onClick={() => Update.Global.isSidebarClosed(false)}>
+          <MenuWrapper />
+        </div>
       </StyledMenu>  
     </>
   );
 };
 
-export default Index;
+export default index;
