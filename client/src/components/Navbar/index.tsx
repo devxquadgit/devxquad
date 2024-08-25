@@ -72,7 +72,7 @@ const index = () => {
 
   const Update = {
 		Global: {
-			isSidebarClosed: useGlobalStore((State) => State.setIsSidebarClosed)
+			isSidebarOpen: useGlobalStore((State) => State.setIsSidebarOpen)
 		}
 	};
 
@@ -100,9 +100,9 @@ const index = () => {
       </StyledNav>
       <StyledMenu>
         <LogoWrapper />
-        <div onClick={() => Update.Global.isSidebarClosed(false)}>
+        <span onClick={() => Update.Global.isSidebarOpen(true)}>
           <MenuWrapper />
-        </div>
+        </span>
       </StyledMenu>  
     </>
   );
