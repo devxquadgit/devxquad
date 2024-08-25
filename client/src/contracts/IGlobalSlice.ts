@@ -1,4 +1,4 @@
 export interface IGlobalSlice {
-  isSidebarClosed : boolean,
-  setIsSidebarClosed : (isSidebarClosed: boolean) => void, 
+  isSidebarOpen : boolean,
+  setIsSidebarOpen : (isSidebarOpen: boolean) => void, 
 }
