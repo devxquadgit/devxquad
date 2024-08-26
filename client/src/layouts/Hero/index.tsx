@@ -143,7 +143,7 @@ const index = () => {
 						label="Contact us"
 						bgcolor="#b80b0a"
 						textColor="white"
-						width="115px"
+						// width="115px"
 						rounded
 						onClick={() => console.log("Button clicked!")}
 					/>
