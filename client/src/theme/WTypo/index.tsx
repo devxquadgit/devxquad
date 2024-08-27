@@ -70,18 +70,18 @@ const getFontStyles = (
 	}
 };
 
-const index: React.FC<IWTypoProps> = ({ Component, label, type, color, url, bold, style }) => {
+const index: React.FC<IWTypoProps> = ({ Component, label, type, targetBlank, color, url, bold, style }) => {
 	return (
 		<div>
 			{type === "link" && url ? (
 				<StyledTypo variant="body1" component={Component} type={type} color={color} bold={bold} style={style}>
-					<StyledLink href={url} component={Component} type={type} color={color} target="_blank">
+					<StyledLink href={url} component={Component} type={type} color={color} target={targetBlank ? "_blank" : ""}>
 						{label}
 					</StyledLink>
 				</StyledTypo>
 			) : type === "arrow-link" && url ? (
 				<StyledTypo variant="body1" component={Component} type={type} color={color} bold={bold} style={style}>
-					<StyledLink href={url} component={Component} type={type} color={color} target="_blank">
+					<StyledLink href={url} component={Component} type={type} color={color} target={targetBlank ? "_blank" : ""}>
 						{label}
 					</StyledLink>
 				</StyledTypo>

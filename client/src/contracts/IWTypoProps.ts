@@ -6,4 +6,5 @@ export interface IWTypoProps {
   url?: string; 
   bold?: string;
   style?: React.CSSProperties;
+  targetBlank?: boolean;
 }

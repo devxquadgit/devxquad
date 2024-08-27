@@ -6,7 +6,6 @@ import WTypo from '@/theme/WTypo';
 import WButton from '@/theme/WButton';
 import Eyes from '@/components/Eyes'
 import { useGlobalStore } from '@/store';
-import { useRouter } from 'next/router';
 
 const StyledNav = styled.nav`
   display: flex;
@@ -40,10 +39,6 @@ const MenuWrapper = styled(Menu)`
   color: #1e293b;
 `;
 
-const StyledSpan = styled.span`
-  cursor: pointer;
-`;
-
 const StyledMenu = styled.div`
   display: none;
 
@@ -64,18 +59,16 @@ const StyledMenu = styled.div`
 `;
 
 const navLinks = [
-  { label: 'Projects', url: '/projects' },
-  { label: 'Services', url: '/services' },
+  { label: 'Projects', url: '#' },
+  { label: 'Services', url: '#' },
 ];
 
 const navLinks2 = [
-  { label: 'About Us', url: '/about' },
-  { label: 'Our Team', url: '/team' },
+  { label: 'About Us', url: '#' },
+  { label: 'Our Team', url: '#' },
 ];
 
 const index = () => {
-
-  const router = useRouter()
 
   const Update = {
 		Global: {
@@ -86,9 +79,7 @@ const index = () => {
   return (
     <>
       <StyledNav>
-        <StyledSpan onClick={() => router.push('/')}>
-          <LogoWrapper />
-        </StyledSpan>
+        <LogoWrapper />
         <StyledNavLinks>
           {navLinks.map(({ label, url }) => (
             <WTypo key={label} label={label} type="link" url={url} color="#64748b" />
