@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import Logo from '@/assets/logo/logo.svg';
 import Menu from '@/assets/icons/menu.svg';
 import WTypo from '@/theme/WTypo';
 import WButton from '@/theme/WButton';
-import Eyes from '@/components/Eyes';
+import Eyes from '@/components/Eyes'
 import { useGlobalStore } from '@/store';
 
-const StyledNav = styled.nav<{ isSticky: boolean }>`
+const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -15,16 +15,12 @@ const StyledNav = styled.nav<{ isSticky: boolean }>`
   width: 100%;
   border-bottom: 1px solid #f1f5f9;
   background-color: #fff;
-  box-shadow: ${(props) =>
-    props.isSticky ? '0 0.125rem 0.25rem rgba(2, 6, 23, 0.075)' : 'none'};
-  position: ${(props) => (props.isSticky ? 'fixed' : 'relative')};
-  top: 0;
-  z-index: 999;
-  transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  box-shadow: 0 0.125rem 0.25rem rgba(2, 6, 23, 0.075);
 
   @media (max-width: 900px) {
     display: none;
   }
+
 `;
 
 const StyledNavLinks = styled.div`
@@ -72,30 +68,17 @@ const navLinks2 = [
   { label: 'Our Team', url: '#' },
 ];
 
-const Navbar: React.FC = () => {
-  const [isSticky, setIsSticky] = useState(false);
+const index = () => {
 
   const Update = {
-    Global: {
-      isSidebarOpen: useGlobalStore((state) => state.setIsSidebarOpen),
-    },
-  };
-
-  const handleScroll = () => {
-    const scrollY = window.scrollY;
-    setIsSticky(scrollY > 0); // Adjust this condition as needed
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+		Global: {
+			isSidebarOpen: useGlobalStore((State) => State.setIsSidebarOpen)
+		}
+	};
 
   return (
     <>
-      <StyledNav isSticky={isSticky}>
+      <StyledNav>
         <LogoWrapper />
         <StyledNavLinks>
           {navLinks.map(({ label, url }) => (
@@ -120,9 +103,9 @@ const Navbar: React.FC = () => {
         <span onClick={() => Update.Global.isSidebarOpen(true)}>
           <MenuWrapper />
         </span>
-      </StyledMenu>
+      </StyledMenu>  
     </>
   );
 };
 
-export default Navbar;
+export default index;
