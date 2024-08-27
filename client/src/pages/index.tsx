@@ -1,19 +1,17 @@
 import React from 'react';
 import Styled from '@emotion/styled';
-import Navbar from '@/components/Navbar'
 
 import Hero from '@/layouts/Hero'
 import Feature from '@/layouts/Feature'
 import Info from '@/layouts/Info'
 import Newsletter from '@/layouts/Newsletter'
-import Footer from '@/layouts/Footer'
+import Footer from '@/components/Footer'
 import Faq from '@/layouts/Faq';
 
 import WButton from '../theme/WButton';
 import WTypo from '../theme/WTypo';
 import WTag from '@/theme/WTag';
 import TwitterIcon from '../assets/twitter.svg';
-
 
 
 const ContainerDiv = Styled.div`
@@ -41,7 +39,6 @@ const MarginDiv = Styled.div<{ margin?: string }>`
 function index() {
   return (
     <div>
-      <Navbar />
       <ContainerDiv>
         <Hero />
       </ContainerDiv>
@@ -61,6 +58,8 @@ function index() {
       <ContainerDiv>
         <Newsletter />
       </ContainerDiv>
+
+      {/* For Temporary Time */}
       <ContainerDiv>
         <Footer />
       </ContainerDiv>
