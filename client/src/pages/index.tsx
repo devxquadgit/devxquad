@@ -60,9 +60,9 @@ function index() {
       </ContainerDiv>
 
       {/* For Temporary Time */}
-      <ContainerDiv>
+      {/* <ContainerDiv>
         <Footer />
-      </ContainerDiv>
+      </ContainerDiv> */}
       {/* <WButton
         label="Contact us"
         bgcolor="#b80b0a"
