@@ -33,9 +33,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <Sidebar />
 
       {/* Uncomment after other pages */}
-      {/* <ContainerDiv>
+      <ContainerDiv>
         <Footer />
-      </ContainerDiv> */}
+      </ContainerDiv>
     </>
   );
 }
