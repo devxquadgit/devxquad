@@ -43,10 +43,10 @@ function index() {
         <Hero />
       </ContainerDiv>
       <ContainerDiv>
-        <Feature />
+        <Feature render="Landing"/>
       </ContainerDiv>
       <ContainerDiv>
-        <Info />
+        <Info render="Landing"/>
       </ContainerDiv>
       
       {/* Testing */}

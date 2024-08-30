@@ -32,7 +32,10 @@ function index() {
         <Feature />
       </ContainerDiv> */}
       <ContainerDiv>
-        <Info />
+        <Info render='About' />
+      </ContainerDiv>
+      <ContainerDiv>
+        <Feature render='About' />
       </ContainerDiv>
       <ContainerDiv>
         <Newsletter />
