@@ -4,6 +4,7 @@ import WTypo from "@/theme/WTypo";
 import infoData from "./infoData";
 import WTag from "@/theme/WTag";
 import TickIcon from "@/assets/icons/tick.svg";
+import { IInfoLayoutProps } from "@/contracts/IInfoLayoutProps";
 
 const StyledDiv = styled.div`
 	display: flex;
@@ -75,11 +76,8 @@ const StyledPointsMain = styled.div`
 	margin-bottom: 32px;
 `;
 
-interface InfoLayoutProps {
-	render: string;
-}
 
-const InfoLayout: React.FC<InfoLayoutProps> = ({ render }) => {
+const index: React.FC<IInfoLayoutProps> = ({ render }) => {
 
 	const section = infoData.find((section) => section.render === render);
 
@@ -159,4 +157,4 @@ const InfoLayout: React.FC<InfoLayoutProps> = ({ render }) => {
 	);
 };
 
-export default InfoLayout;
+export default index;
