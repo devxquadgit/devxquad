@@ -4,6 +4,7 @@ import WTypo from "@/theme/WTypo";
 import infoData from "./infoData";
 import WTag from "@/theme/WTag";
 import TickIcon from "@/assets/icons/tick.svg";
+import { IInfoLayoutProps } from "@/contracts/IInfoLayoutProps";
 
 const StyledDiv = styled.div`
 	display: flex;
@@ -13,16 +14,16 @@ const StyledDiv = styled.div`
 	margin-top: 100px;
 
 	@media (max-width: 767px) {
-    flex-direction: column;
-  }
+		flex-direction: column;
+	}
 
 	@media (max-width: 550px) {
-    margin-top: 60px;
-  }
+		margin-top: 60px;
+	}
 
 	@media (max-width: 425px) {
-    margin-top: 50px;
-  }
+		margin-top: 50px;
+	}
 `;
 
 const StyledHeading = styled.div<{ isEven: boolean }>`
@@ -34,12 +35,12 @@ const StyledHeading = styled.div<{ isEven: boolean }>`
 
 	@media (max-width: 1024px) {
 		width: 42.5%;
-  }
+	}
 
 	@media (max-width: 767px) {
 		order: 0;
-    width: 100%;
-  }
+		width: 100%;
+	}
 `;
 
 const StyledImageMain = styled.div<{ isEven: boolean }>`
@@ -53,13 +54,13 @@ const StyledImageMain = styled.div<{ isEven: boolean }>`
 
 	@media (max-width: 1024px) {
 		margin: 0;
-  }
+	}
 	
 	@media (max-width: 767px) {
 		padding: 0;
 		padding-top: 2rem;
-    width: 100%;
-  }
+		width: 100%;
+	}
 `;
 
 const StyledPoints = styled.div`
@@ -69,16 +70,24 @@ const StyledPoints = styled.div`
 `;
 
 const StyledPointsMain = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
 	margin-bottom: 32px;
 `;
 
-const InfoLayout: React.FC = () => {
+
+const index: React.FC<IInfoLayoutProps> = ({ render }) => {
+
+	const section = infoData.find((section) => section.render === render);
+
+	if (!section) {
+		return null;
+	}
+
 	return (
 		<>
-			{infoData.map((data, index) => {
+			{section.data.map((data, index) => {
 				const isEvenIndex = index % 2 === 0;
 
 				return (
@@ -148,4 +157,4 @@ const InfoLayout: React.FC = () => {
 	);
 };
 
-export default InfoLayout;
+export default index;

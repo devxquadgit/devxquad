@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import WTypo from "@/theme/WTypo";
 import Card from '@/components/Card';
 import featureData from './featureData';
+import { IFeatureLayoutProps } from "@/contracts/IFeatureLayoutProps";
 
 const StyledDiv = styled.div`
   width: 100%;
@@ -60,30 +61,37 @@ const StyledFeatureCards = styled.div`
   }
 `;
 
-const Index = () => {
+const index: React.FC<IFeatureLayoutProps> = ({render}) => {
+
+  const section = featureData.find((section) => section.render === render);
+
+	if (!section) {
+		return null;
+	}
+
   return (
     <StyledDiv>
       <StyledFeatureMain>
         <StyledHeading>
           <WTypo
-            label="FEATURES"
+            label={section.topic}
             type="sub-sm"
             color="rgba(184, 11, 10, 1)"
           />
           <WTypo
-            label="Features to make you stand out"
+            label={section.heading}
             type="main-md"
             color="#1e293b"
           />
           <WTypo
-            label="Manage your projects from start to finish. With all of your projects in Block, you’ll always know who’s doing what, by when."
+            label={section.subheading}
             type="sub-lg"
             color="#64748b"
             style={{ textAlign: 'center' }}
           />
         </StyledHeading>
         <StyledFeatureCards>
-          {featureData.map(({ SVG, Heading, Desc }) => {
+          {section.data.map(({ SVG, Heading, Desc }) => {
             return (
               <Card
                 Component="Feature"
@@ -100,4 +108,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default index;
