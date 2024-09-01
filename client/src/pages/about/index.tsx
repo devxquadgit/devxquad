@@ -3,7 +3,7 @@ import Styled from '@emotion/styled';
 import Feature from '@/layouts/Feature'
 import Info from '@/layouts/Info'
 import Newsletter from '@/layouts/Newsletter';
-
+import Team from '@/layouts/Team'
 
 const ContainerDiv = Styled.div`
   --bs-gutter-x: 2.5rem;
@@ -36,6 +36,9 @@ function index() {
       </ContainerDiv>
       <ContainerDiv>
         <Feature render='About' />
+      </ContainerDiv>
+      <ContainerDiv>
+        <Team render='About'/>
       </ContainerDiv>
       <ContainerDiv>
         <Newsletter />
