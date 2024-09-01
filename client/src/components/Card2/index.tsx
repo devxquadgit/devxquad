@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Avatar from '@mui/material/Avatar';
 import WTypo from '@/theme/WTypo';
 import Adbhut from '@/assets/adbhut.jpeg';
 import Image from 'next/image';
+import { ICard2Props } from '@/contracts/ICard2Props';
 
 const StyledCardMain = styled.div`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -26,23 +26,22 @@ const StyledAvatar = styled.div`
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 `;
 
-const index = () => {
+const index: React.FC<ICard2Props> = ({ Img, Name, Desc, style }) => {
   return (
     <StyledCardMain>
       <StyledAvatar>
         <Image alt="Remy Sharp" src={Adbhut} width={80}/>
       </StyledAvatar>
       <WTypo
-        label="Adbhut"
+        label={Name}
         type="sub-md"
         color="#64748b"
         style={{ marginBottom: '.2rem', lineHeight: '1.5' }}
       />
       <WTypo
-        label="Full Stack Developer"
+        label={Desc}
         type="sub-sm"
         color="#64748b"
-        // style={{ maxWidth: '30rem', lineHeight: '1.5' }}
       />
     </StyledCardMain>
   )
