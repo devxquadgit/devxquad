@@ -24,6 +24,21 @@ const teamData: ITeamDataProps[] = [
 				Name: "Adbhut Mishra",
 				Desc: "AI/ML Expert",
 			},
+			{
+				Img: Adbhut,
+				Name: "Adbhut Mishra",
+				Desc: "AI/ML Expert",
+			},
+			{
+				Img: Adbhut,
+				Name: "Adbhut Mishra",
+				Desc: "AI/ML Expert",
+			},
+			{
+				Img: Adbhut,
+				Name: "Adbhut Mishra",
+				Desc: "AI/ML Expert",
+			},
     ]
   }
 ];
