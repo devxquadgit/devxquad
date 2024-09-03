@@ -6,7 +6,7 @@ const teamData: ITeamDataProps[] = [
   {
     render: "About",
 		topic: "Team",
-		heading: "Features to make you stand out",
+		heading: "Save your time and money by choosing Our highly performant team.",
 		subheading: "Manage your projects from start to finish. With all of your projects in Block, you’ll always know who’s doing what, by when.",
     data: [
       {
@@ -16,28 +16,18 @@ const teamData: ITeamDataProps[] = [
 			},
 			{
 				Img: Adbhut,
-				Name: "Adbhut Mishra",
-				Desc: "Project Manager",
+				Name: "Madhav Singh",
+				Desc: "Front-end Developer",
 			},
 			{
 				Img: Adbhut,
-				Name: "Adbhut Mishra",
-				Desc: "AI/ML Expert",
+				Name: "Surya Teja",
+				Desc: "Back-end Developer",
 			},
 			{
 				Img: Adbhut,
-				Name: "Adbhut Mishra",
-				Desc: "AI/ML Expert",
-			},
-			{
-				Img: Adbhut,
-				Name: "Adbhut Mishra",
-				Desc: "AI/ML Expert",
-			},
-			{
-				Img: Adbhut,
-				Name: "Adbhut Mishra",
-				Desc: "AI/ML Expert",
+				Name: "Narendra Nishad",
+				Desc: "Front-end Developer",
 			},
     ]
   }
