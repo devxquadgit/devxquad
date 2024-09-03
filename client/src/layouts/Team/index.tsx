@@ -8,7 +8,7 @@ import { ITeamLayoutProps } from "@/contracts/ITeamLayoutProps";
 const StyledDiv = styled.div`
   width: 100%;
   display: flex;
-  margin-top: 60px;
+  margin-top: 20px;
 
   @media (max-width: 425px) {
     margin-top: 80px;
@@ -20,8 +20,9 @@ const StyledHeading = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   max-width: calc(100% - 30rem);
+  text-align: center;
 
   @media (max-width: 1024px) {
     max-width: calc(100% - 19rem);
@@ -86,12 +87,12 @@ const index: React.FC<ITeamLayoutProps> = ({render}) => {
             type="main-md"
             color="#1e293b"
           />
-          <WTypo
+          {/* <WTypo
             label={section.subheading}
             type="sub-lg"
             color="#64748b"
             style={{ textAlign: 'center' }}
-          />
+          /> */}
         </StyledHeading>
         <StyledFeatureCards>
           {section.data.map(({ Img, Name, Desc }) => {
