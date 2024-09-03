@@ -8,8 +8,7 @@ import { ITeamLayoutProps } from "@/contracts/ITeamLayoutProps";
 const StyledDiv = styled.div`
   width: 100%;
   display: flex;
-  margin-top: 100px;
-  padding-bottom: 40px;
+  margin-top: 60px;
 
   @media (max-width: 425px) {
     margin-top: 80px;
@@ -48,14 +47,18 @@ const StyledFeatureMain = styled.div`
 
 const StyledFeatureCards = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 1180px) {
+    margin: 0 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   @media (max-width: 900px) {
-    margin: 0 2rem;
     grid-template-columns: repeat(2, 1fr);
   }
   
-  @media (max-width: 767px) {
+  @media (max-width: 570px) {
     margin: 0;
     grid-template-columns: repeat(1, 1fr);
   }
