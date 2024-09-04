@@ -12,22 +12,22 @@ const teamData: ITeamDataProps[] = [
       {
 				Img: Adbhut,
 				Name: "Adbhut Mishra",
-				Desc: "Full Stack Developer",
+				Desc: "CTO",
 			},
 			{
 				Img: Adbhut,
 				Name: "Madhav Singh",
-				Desc: "Front-end Developer",
+				Desc: "Software Developer",
 			},
 			{
 				Img: Adbhut,
 				Name: "Surya Teja",
-				Desc: "Back-end Developer",
+				Desc: "Software Developer",
 			},
 			{
 				Img: Adbhut,
 				Name: "Narendra Nishad",
-				Desc: "Front-end Developer",
+				Desc: "Software Developer",
 			},
     ]
   }

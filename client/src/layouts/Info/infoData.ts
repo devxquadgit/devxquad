@@ -2,6 +2,7 @@ import { IInfoProps } from "@/contracts/IInfoProps";
 
 import Img2 from '@/assets/landing/img2.png';
 import Img3 from '@/assets/landing/img3.png';
+import Img4 from '@/assets/landing/img4.png';
 
 const infoData: IInfoProps[] = [
   
@@ -29,7 +30,7 @@ const infoData: IInfoProps[] = [
     render: 'About',
     data: [
       {
-        Image: Img3.src,
+        Image: Img4.src,
         Topic: "ABOUT US",
         Heading: "Who we are",
         Desc: "With our next-generation app platform, teams easily design and deploy flexible and engaging apps that power critical workflows and make valuable data actionable across the enterprise.",
