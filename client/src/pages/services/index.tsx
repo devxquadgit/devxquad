@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import WTypo from "@/theme/WTypo";
 import { IFeatureLayoutProps } from "@/contracts/IFeatureLayoutProps";
+import Info from '@/layouts/Info';
 
 const StyledDiv = styled.div`
   width: 100%;
@@ -44,6 +45,25 @@ const StyledFeatureMain = styled.div`
   width: 100%;
 `;
 
+
+const ContainerDiv = styled.div`
+  --bs-gutter-x: 2.5rem;
+  --bs-gutter-y: 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: calc(var(--bs-gutter-x)* .5);
+  padding-right: calc(var(--bs-gutter-x)* .5);
+  width: 100%;
+  
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+  }
+  
+  @media (max-width: 767px) {
+    max-width: 540px;
+  }
+`;
+
 const index: React.FC<IFeatureLayoutProps> = () => {
 
   return (
@@ -67,6 +87,9 @@ const index: React.FC<IFeatureLayoutProps> = () => {
             style={{ textAlign: 'center' }}
           />
         </StyledHeading>
+        <ContainerDiv>
+          <Info render="Service"/>
+        </ContainerDiv> 
       </StyledFeatureMain>
     </StyledDiv>
   );
