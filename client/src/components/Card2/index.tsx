@@ -41,7 +41,8 @@ const index: React.FC<ICard2Props> = ({ Img, Name, Desc, style }) => {
         <WTypo
           label={Name}
           type="sub-md"
-          color="#64748b"
+          color="#1e293b"
+          bold="550"
           style={{ marginBottom: '.2rem', lineHeight: '1.5' }}
         />
         <WTypo
