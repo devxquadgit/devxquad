@@ -3,6 +3,10 @@ import { IInfoProps } from "@/contracts/IInfoProps";
 import Img2 from '@/assets/landing/img2.png';
 import Img3 from '@/assets/landing/img3.png';
 import Img4 from '@/assets/landing/img4.png';
+import Img5 from '@/assets/landing/img5.png';
+import Img6 from '@/assets/landing/img6.png';
+import Img7 from '@/assets/landing/img7.png';
+import Img8 from '@/assets/landing/img8.png';
 
 const infoData: IInfoProps[] = [
   
@@ -43,14 +47,14 @@ const infoData: IInfoProps[] = [
     render: 'Service',
     data: [
       {
-        Image: Img2.src,
+        Image: Img5.src,
         Topic: "STREAMLINE & THRIVE",
         Heading: "Website Design",
         Desc: "We design visually stunning and user- friendly websites that elevate your online presence. We provide client-centric ui/ux that are user-friendly and aesthetic at the same time.",
         Url: "www.google.com"
       },
       {
-        Image: Img3.src,
+        Image: Img6.src,
         Topic: "VISION & EXECUTE",
         Heading: "Web Development",
         Desc: "We build reliable, scalable solutions that deliver your vision and exceed your expectations.",
@@ -58,14 +62,14 @@ const infoData: IInfoProps[] = [
         Url: "www.google.com"
       },
       {
-        Image: Img2.src,
+        Image: Img7.src,
         Topic: "STREAMLINE & THRIVE",
         Heading: "Ecommerce development",
         Desc: "We are at the forefront of modern e-commerce development. Which mainly means adding your logo to the Shopify store template we’ve used for the past six years.",
         Url: "www.google.com"
       },
       {
-        Image: Img3.src,
+        Image: Img8.src,
         Topic: "VISION & EXECUTE",
         Heading: "Mobile Development",
         Desc: "Mobile app development is the act or process by which a mobile app is developed for one or more mobile devices.",

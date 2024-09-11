@@ -18,3 +18,8 @@ Wrapper Guide
 4. Tag: Type, Clickable, bordered
   - Circle || socialmedia
   - pill
+
+#050038 blue
+
+#ffb902 yellow
+
