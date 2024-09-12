@@ -140,7 +140,7 @@ const index = () => {
 				</StyledHeading>
 				<ButtonWrapper>
 					<WButton
-						label="Contact us"
+						label="Get Quote"
 						bgcolor="#b80b0a"
 						textColor="white"
 						// width="115px"
