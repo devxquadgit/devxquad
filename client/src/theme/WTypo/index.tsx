@@ -10,6 +10,7 @@ const StyledTypo = styled(Typography)<{ component?: string, type?: string; color
 	color: ${(props) => props.color || "black"};
 	line-height: ${(props) =>  props.type === "main-lg" ? 1.25 : props.type === "sub-xl" ? 1.4 : props.type === "sub-lg" ? "30px" : "normal"};
 	font-weight: ${(props) => props.bold || "normal"};
+	cursor: ${(props) => props.type === 'arrow-link' && "pointer"};
 
 	@media (max-width: 900px) {
     font-size: ${(props) => props.type === "main-lg" ? "47px" : props.type === "sub-xl" ? "29px" : getFontStyles(props.type).fontSize};
