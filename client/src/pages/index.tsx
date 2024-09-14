@@ -33,14 +33,16 @@ const ContainerDiv = Styled.div`
 `;
 
 const MarginDiv = Styled.div<{ margin?: string }>`
-  padding: ${({ margin }) => (margin ? margin : "1rem")};
+  margin-top: ${({ margin }) => (margin ? margin : "1rem")};
 `;
 
 function index() {
   return (
     <div>
       <ContainerDiv>
-        <Hero />
+        <MarginDiv margin='7rem'>
+          <Hero />
+        </MarginDiv> 
       </ContainerDiv>
       <ContainerDiv>
         <Feature render="Landing"/>
