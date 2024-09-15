@@ -23,6 +23,9 @@ const ContainerDiv = Styled.div`
   }
 `;
 
+const MarginDiv = Styled.div<{ margin?: string }>`
+  margin-top: ${({ margin }) => (margin ? margin : "1rem")};
+`;
 
 function index() {
   return (
@@ -32,7 +35,9 @@ function index() {
         <Feature />
       </ContainerDiv> */}
       <ContainerDiv>
-        <Info render='About' />
+        <MarginDiv margin='7rem'>
+          <Info render='About' />
+        </MarginDiv>
       </ContainerDiv>
       <ContainerDiv>
         <Feature render='About' />

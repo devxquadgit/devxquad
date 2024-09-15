@@ -17,7 +17,9 @@ const StyledNav = styled.nav`
   border-bottom: 1px solid #f1f5f9;
   background-color: #fff;
   box-shadow: 0 0.125rem 0.25rem rgba(2, 6, 23, 0.075);
-
+  position: fixed;
+  top: 0; 
+  
   @media (max-width: 900px) {
     display: none;
   }

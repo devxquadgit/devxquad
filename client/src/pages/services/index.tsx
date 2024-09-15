@@ -20,6 +20,7 @@ const StyledHeading = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+  margin-top:7rem;
   margin-bottom: 80px;
   max-width: calc(100% - 30rem);
 
