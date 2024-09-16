@@ -63,7 +63,7 @@ const index = () => {
         {sidebarOptions.map((option) => (
           <StyledLink href={option.path} key={option.text} passHref>
             <ListItem button key={option.text}>
-              <ListItemText primary={option.text} />
+              <ListItemText primary={option.text} onClick={toggleDrawer(false)}/>
             </ListItem>
           </StyledLink>
         ))}
