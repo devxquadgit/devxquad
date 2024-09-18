@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import Logo from '@/assets/logo/logo.svg';
 import Menu from '@/assets/icons/menu.svg';
@@ -77,6 +77,8 @@ const navLinks2 = [
 
 const index = () => {
 
+  const [nav, setNav] = useState("/")
+
   const router = useRouter()
 
   const Update = {
@@ -84,6 +86,10 @@ const index = () => {
 			isSidebarOpen: useGlobalStore((State) => State.setIsSidebarOpen)
 		}
 	};
+
+  useEffect(() => {
+    setNav(router.pathname)
+  },[router.pathname])
 
   return (
     <>
@@ -93,11 +99,11 @@ const index = () => {
         </StyledSpan>
         <StyledNavLinks>
           {navLinks.map(({ label, url }) => (
-            <WTypo key={label} label={label} type="link" url={url} color="#64748b" />
+            <WTypo key={label} label={label} type="link" url={url} color={ nav === url ? "#1e293b" : "#64748b" } style={{fontWeight : `${nav === url ? '600' : '400'}`}}/>
           ))}
           <Eyes />
           {navLinks2.map(({ label, url }) => (
-            <WTypo key={label} label={label} type="link" url={url} color="#64748b" />
+            <WTypo key={label} label={label} type="link" url={url} color={ nav === url ? "#1e293b" : "#64748b" } style={{fontWeight : `${nav === url ? '600' : '400'}`}} />
           ))}
         </StyledNavLinks>
         <WButton
