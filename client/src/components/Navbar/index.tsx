@@ -66,12 +66,13 @@ const StyledMenu = styled.div`
 `;
 
 const navLinks = [
-  // { label: 'Projects', url: '/projects' },
+  { label: 'Projects', url: '/projects' },
   { label: 'Services', url: '/services' },
 ];
 
 const navLinks2 = [
   { label: 'About Us', url: '/about' },
+  { label: 'Blogs', url: '/blogs' },
   // { label: 'Our Team', url: '/team' },
 ];
 
