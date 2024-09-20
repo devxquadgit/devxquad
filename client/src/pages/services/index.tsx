@@ -21,10 +21,14 @@ const StyledHeading = styled.div`
   align-items: center;
   gap: 1rem;
   margin-top:7rem;
-  margin-bottom: 80px;
   max-width: calc(100% - 30rem);
 
   @media (max-width: 1024px) {
+    max-width: calc(100% - 19rem);
+  }
+
+  @media (max-width: 900px) {
+    margin-top: 0;
     max-width: calc(100% - 19rem);
   }
 
