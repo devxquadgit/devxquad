@@ -117,7 +117,7 @@ const index = () => {
         />
       </StyledNav>
       <StyledMenu>
-        <LogoWrapper />
+        <LogoWrapper onClick={() => router.push('/')}/>
         <span onClick={() => Update.Global.isSidebarOpen(true)}>
           <MenuWrapper />
         </span>
