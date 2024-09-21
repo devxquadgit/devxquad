@@ -2,19 +2,34 @@ import { IFaqProps } from "@/contracts/IFaqProps";
 
 const faqData: IFaqProps[] = [
   {
-    question: "Is Dubai Real Estate Booming?",
+    question: "What exactly is DevXquad?",
     answer:
-      "The UAE real estate market is likely to pick up steam in the next years, having already experienced record-breaking growth since the fourth quarter of 2021. For instance, Dubai's real estate transactions last year more than doubled in value and broke the previous 12-year record.",
+      "Think of us as tech superheroes 🦸‍♀️🦸‍♂️, but our superpower is turning ideas into code (and drinking too much coffee ☕).",
   },
   {
-    question: "Do you pay property tax in Dubai?",
+    question: "Do you guys only work with software?",
     answer:
-      "There is no particular tax system in the United Arab Emirates for expats. There is no income tax or inheritance tax, nor is there a property tax on homes.",
+      "Nope! We do software, digital marketing, and even launch apps 🚀. Basically, we’re like tech ninjas 🥷, but without the cool costumes (yet).",
   },
   {
-    question: "What is the current situation of property market in Dubai?",
+    question: "Why is your website still under construction?",
     answer:
-      "The Dubai property market is experiencing strong growth in Q2 2024. Sales volume, price per square foot, and total sales value have all increased significantly compared to last year.",
+      "Because great things take time ⏳! We’re perfecting it, just like fine wine 🍷. Stay tuned!",
+  },
+  {
+    question: "Is there anything DevXquad can’t do?",
+    answer:
+      "We're still working on time travel 🕰️, but other than that, we've got it all covered 🚀.",
+  },
+  {
+    question: "How do I contact you?",
+    answer:
+      "LinkedIn is our go-to 📲! Or if you’re old-school, we accept smoke signals too (results may vary) 🏞️.",
+  },
+  {
+    question: "Are you real developers, or just wizards in disguise?",
+    answer:
+      "We can neither confirm nor deny the presence of wizard hats 🧙‍♂️ in our office. But yes, our code works like magic ✨.",
   },
 ];
 
