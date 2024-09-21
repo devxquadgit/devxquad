@@ -96,12 +96,12 @@ const FAQ = () => {
       <StyledFaq>  
         <StyledFaqHeading>
           <WTypo
-            label="ASK"
+            label="FAQ"
             type="sub-sm"
             color="rgba(184, 11, 10, 1)"
           />
           <WTypo
-            label="Frequently asked questions"
+            label="Funny and Quirky"
             type="main-md"
             color="#1e293b"
           />
