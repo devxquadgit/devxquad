@@ -76,7 +76,7 @@ const index: React.FC<IFeatureLayoutProps> = () => {
       <StyledFeatureMain>
         <StyledHeading>
           <WTypo
-            label="SERVICES"
+            label="BLOGS"
             type="sub-sm"
             color="rgba(184, 11, 10, 1)"
           />

@@ -72,7 +72,8 @@ const navLinks = [
 
 const navLinks2 = [
   { label: 'About Us', url: '/about' },
-  { label: 'Our Team', url: '/team' },
+  { label: 'Blogs', url: '/blogs' },
+  // { label: 'Our Team', url: '/team' },
 ];
 
 const index = () => {
@@ -116,7 +117,7 @@ const index = () => {
         />
       </StyledNav>
       <StyledMenu>
-        <LogoWrapper />
+        <LogoWrapper onClick={() => router.push('/')}/>
         <span onClick={() => Update.Global.isSidebarOpen(true)}>
           <MenuWrapper />
         </span>

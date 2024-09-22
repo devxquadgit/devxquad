@@ -19,10 +19,4 @@ const options: ISidebarOption[] = [
   },
 ];
 
-// Automatically prepend "/home" to paths that don't start with "/"
-const sidebarOptions = options.map(option => ({
-  ...option,
-  path: option.path.startsWith('/') ? option.path : `/home/${option.path}`,
-}));
-
-export default sidebarOptions;
+export default options;
