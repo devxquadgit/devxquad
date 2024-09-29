@@ -3,5 +3,6 @@ export interface IWInputProps {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
+  rounded?: boolean;
   style?: React.CSSProperties;
 }

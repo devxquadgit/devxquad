@@ -105,6 +105,7 @@ const index = () => {
           type="email"
           value={inputValue}
           onChange={handleInputChange}
+          rounded={true}
           placeholder="Enter your email"
           style={{height: '38px', textAlign: 'center'}}
         />

@@ -2,8 +2,8 @@ import React from 'react';
 import { IWInputProps } from '@/contracts/IWInputProps';
 import styled from "@emotion/styled";
 
-const StyledInput = styled.input<{ type?:string }>`
-  border-radius: 50px;
+const StyledInput = styled.input<{ type?:string, rounded?:boolean }>`
+  border-radius: ${(props) => props.rounded ? '50px' : '8px'};
   outline: none;
   border: 1px solid #e2e8f0;
   color: #64748b;
@@ -14,7 +14,7 @@ const StyledInput = styled.input<{ type?:string }>`
   width: ${(props) => props.width || 'auto'};
 `;
 
-const index: React.FC<IWInputProps> = ({ type, value, onChange, placeholder, style }) => {
+const index: React.FC<IWInputProps> = ({ type, value, onChange, rounded, placeholder, style }) => {
   return (
     <StyledInput
       type={type}
@@ -22,6 +22,7 @@ const index: React.FC<IWInputProps> = ({ type, value, onChange, placeholder, sty
       onChange={onChange}
       placeholder={placeholder}
       style={style}
+      rounded={rounded}
     />
   );
 };
