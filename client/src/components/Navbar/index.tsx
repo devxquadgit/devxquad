@@ -113,7 +113,7 @@ const index = () => {
           textColor="white"
           width="115px"
           rounded
-          onClick={() => console.log('Button clicked!')}
+          onClick={() => router.push('contactus')}
         />
       </StyledNav>
       <StyledMenu>

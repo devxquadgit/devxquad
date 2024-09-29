@@ -6,6 +6,7 @@ import WTypo from '@/theme/WTypo';
 import WButton from '@/theme/WButton';
 import Eyes from '@/components/Eyes'
 import { useGlobalStore } from '@/store';
+import { useRouter } from 'next/router';
 
 const StyledNav = styled.nav`
   display: flex;
@@ -70,6 +71,8 @@ const navLinks2 = [
 
 const index = () => {
 
+  const router = useRouter()
+
   const Update = {
 		Global: {
 			isSidebarOpen: useGlobalStore((State) => State.setIsSidebarOpen)
@@ -95,7 +98,7 @@ const index = () => {
           textColor="white"
           width="115px"
           rounded
-          onClick={() => console.log('Button clicked!')}
+          onClick={() => router.push('contactus')}
         />
       </StyledNav>
       <StyledMenu>
