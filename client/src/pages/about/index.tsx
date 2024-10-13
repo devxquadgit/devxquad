@@ -42,9 +42,9 @@ function index() {
       <ContainerDiv>
         <Feature render='About' />
       </ContainerDiv>
-      <ContainerDiv>
+      {/* <ContainerDiv>
         <Team render='About'/>
-      </ContainerDiv>
+      </ContainerDiv> */}
       <ContainerDiv>
         <Newsletter />
       </ContainerDiv>
