@@ -1,10 +1,10 @@
 import { ISidebarOption } from "@/contracts/ISidebarOption";
 
 const options: ISidebarOption[] = [
-  {
-    text: 'Projects',
-    path: '/project',
-  },
+  // {
+  //   text: 'Projects',
+  //   path: '/project',
+  // },
   {
     text: 'Services',
     path: '/services',
@@ -13,10 +13,10 @@ const options: ISidebarOption[] = [
     text: 'About Us',
     path: '/about',
   },
-  {
-    text: 'Our Team',
-    path: '/team',
-  },
+  // {
+  //   text: 'Blogs',
+  //   path: '/blogs',
+  // },
 ];
 
 export default options;

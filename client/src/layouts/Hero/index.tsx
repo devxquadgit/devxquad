@@ -6,6 +6,7 @@ import WButton from "@/theme/WButton";
 import Img from "@/assets/landing/img1.png";
 import CreditCardIcon from '@/assets/icons/creditcard.svg';
 import MoneyIcon from '@/assets/icons/money.svg';
+import { useRouter } from "next/router";
 
 const StyledDiv = styled.div`
 	width: 100%;
@@ -114,6 +115,9 @@ const ButtonWrapper = styled.div`
 `;
 
 const index = () => {
+
+	const router = useRouter()
+
 	return (
 		<StyledDiv>
 			<StyledContent>
@@ -145,7 +149,7 @@ const index = () => {
 						textColor="white"
 						// width="115px"
 						rounded
-						onClick={() => console.log("Button clicked!")}
+						onClick={() => router.push('contactus')}
 					/>
 				</ButtonWrapper>
 				{/* <StyledTagDiv>

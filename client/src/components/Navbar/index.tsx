@@ -66,14 +66,13 @@ const StyledMenu = styled.div`
 `;
 
 const navLinks = [
-  { label: 'Projects', url: '/projects' },
+  // { label: 'Projects', url: '/projects' },
   { label: 'Services', url: '/services' },
 ];
 
 const navLinks2 = [
   { label: 'About Us', url: '/about' },
-  { label: 'Blogs', url: '/blogs' },
-  // { label: 'Our Team', url: '/team' },
+  // { label: 'Blogs', url: '/blogs' },
 ];
 
 const index = () => {
@@ -113,7 +112,7 @@ const index = () => {
           textColor="white"
           width="115px"
           rounded
-          onClick={() => console.log('Button clicked!')}
+          onClick={() => router.push('contactus')}
         />
       </StyledNav>
       <StyledMenu>
