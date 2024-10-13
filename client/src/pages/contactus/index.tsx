@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "@emotion/styled";
 import WTypo from "@/theme/WTypo";
 import { IFeatureLayoutProps } from "@/contracts/IFeatureLayoutProps";
-import Info from '@/layouts/Info';
+import WInput from '@/theme/WInput';
+import Img from '@/assets/landing/img9.png';
+import Newsletter from '@/layouts/Newsletter'
 
 const StyledDiv = styled.div`
   width: 100%;
@@ -43,7 +45,7 @@ const StyledHeading = styled.div`
   }
 `;
 
-const StyledFeatureMain = styled.div`
+const StyledContactMain = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +61,6 @@ const ContainerDiv = styled.div`
   padding-left: calc(var(--bs-gutter-x)* .5);
   padding-right: calc(var(--bs-gutter-x)* .5);
   width: 100%;
-  
   @media (min-width: 1400px) {
     max-width: 1320px;
   }
@@ -69,11 +70,70 @@ const ContainerDiv = styled.div`
   }
 `;
 
+const StyledFormContainer = styled.div`
+	display: flex;
+	align-items: center;
+	margin-top: 80px;
+  gap: 2rem;
+`;
+
+const StyledForm = styled.div`
+  display: flex;
+  box-shadow: 0 0.125rem 0.25rem rgba(2,6,23,.075);
+  padding: 1.5rem;
+  width: 45%;
+  gap: 2rem;
+  flex-direction: column;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+`;
+
+const StyledFormRow = styled.div`
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+`;
+
+const StyledFormInput = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+`;
+
+
+const StyledImageMain = styled.div`
+	width: "57%";
+	padding-left: "8.3%";
+	padding-right: "0";
+
+	& img {
+		max-width: 624px;
+	}
+
+	@media (max-width: 1024px) {
+		margin: 0;
+	}
+	
+	@media (max-width: 767px) {
+		padding: 0;
+		padding-top: 2rem;
+		width: 100%;
+	}
+`;
+
 const index: React.FC<IFeatureLayoutProps> = () => {
+
+  const [inputValue, setInputValue] = useState<string>('');
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setInputValue(event.target.value);
+  };
 
   return (
     <StyledDiv>
-      <StyledFeatureMain>
+      <StyledContactMain>
         <StyledHeading>
           <WTypo
             label="SAY HI"
@@ -93,9 +153,123 @@ const index: React.FC<IFeatureLayoutProps> = () => {
           />
         </StyledHeading>
         <ContainerDiv>
-          <Info render="Service"/>
+          <StyledFormContainer>
+          <StyledForm>
+            <StyledFormRow>
+              <StyledFormInput>
+                <WTypo
+                  label="First Name"
+                  type="sub-sm"
+                  color="#64748b"
+                  style={{ marginBottom: '0.5rem' }}
+                />
+                <WInput
+                  type="text"
+                  value={inputValue}
+                  onChange={handleInputChange}
+                  placeholder="John"
+                  style={{height: '38px', textAlign: 'center', width: '100%'}}
+                  
+                />
+              </StyledFormInput>
+              <StyledFormInput>
+                <WTypo
+                  label="Last Name"
+                  type="sub-sm"
+                  color="#64748b"
+                  style={{ marginBottom: '0.5rem' }}
+                />
+                <WInput
+                  type="text"
+                  value={inputValue}
+                  onChange={handleInputChange}
+                  placeholder="Doe"
+                  style={{height: '38px', textAlign: 'center', width: '100%'}}
+                />
+              </StyledFormInput>
+            </StyledFormRow>
+            <StyledFormRow>
+              <StyledFormInput>
+                <WTypo
+                  label="Email"
+                  type="sub-sm"
+                  color="#64748b"
+                  style={{ marginBottom: '0.5rem' }}
+                />
+                <WInput
+                  type="email"
+                  value={inputValue}
+                  onChange={handleInputChange}
+                  placeholder="johndoe@example.com"
+                  style={{height: '38px', textAlign: 'center', width: '100%'}}
+                />
+              </StyledFormInput>
+            </StyledFormRow>
+            <StyledFormRow>
+              <StyledFormInput>
+                <WTypo
+                  label="Company Name"
+                  type="sub-sm"
+                  color="#64748b"
+                  style={{ marginBottom: '0.5rem' }}
+                />
+                <WInput
+                  type="text"
+                  value={inputValue}
+                  onChange={handleInputChange}
+                  // placeholder="johndoe@example.com"
+                  style={{height: '38px', textAlign: 'center', width: '100%'}}
+                />
+              </StyledFormInput>
+            </StyledFormRow>
+            <StyledFormRow>
+              <StyledFormInput>
+                <WTypo
+                  label="Phone"
+                  type="sub-sm"
+                  color="#64748b"
+                  style={{ marginBottom: '0.5rem' }}
+                />
+                <WInput
+                  type="text"
+                  value={inputValue}
+                  onChange={handleInputChange}
+                  // placeholder="johndoe@example.com"
+                  style={{height: '38px', textAlign: 'center', width: '100%'}}
+                />
+              </StyledFormInput>
+            </StyledFormRow>
+            <StyledFormRow>
+              <StyledFormInput>
+                <WTypo
+                  label="Message"
+                  type="sub-sm"
+                  color="#64748b"
+                  style={{ marginBottom: '0.5rem' }}
+                />
+                <WInput
+                  type="text"
+                  value={inputValue}
+                  onChange={handleInputChange}
+                  placeholder="Write to us"
+                  style={{height: '38px', textAlign: 'center', width: '100%'}}
+                />
+              </StyledFormInput>
+            </StyledFormRow>
+          </StyledForm>
+          <StyledImageMain>
+            <img
+              src={Img.src}
+              width="100%"
+              alt="Landing Image"
+            />
+          </StyledImageMain>
+          </StyledFormContainer>
         </ContainerDiv> 
-      </StyledFeatureMain>
+        <ContainerDiv>
+          <Newsletter />
+        </ContainerDiv>
+      </StyledContactMain>
     </StyledDiv>
   );
 };
