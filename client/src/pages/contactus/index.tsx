@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
 import WTypo from "@/theme/WTypo";
+import WButton from "@/theme/WButton";
 import { IFeatureLayoutProps } from "@/contracts/IFeatureLayoutProps";
 import WInput from '@/theme/WInput';
 import Img from '@/assets/landing/img9.png';
@@ -168,7 +169,7 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   value={inputValue}
                   onChange={handleInputChange}
                   placeholder="John"
-                  style={{height: '38px', textAlign: 'center', width: '100%'}}
+                  style={{height: '38px', width: '100%'}}
                   
                 />
               </StyledFormInput>
@@ -184,7 +185,7 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   value={inputValue}
                   onChange={handleInputChange}
                   placeholder="Doe"
-                  style={{height: '38px', textAlign: 'center', width: '100%'}}
+                  style={{height: '38px', width: '100%'}}
                 />
               </StyledFormInput>
             </StyledFormRow>
@@ -201,7 +202,7 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   value={inputValue}
                   onChange={handleInputChange}
                   placeholder="johndoe@example.com"
-                  style={{height: '38px', textAlign: 'center', width: '100%'}}
+                  style={{height: '38px', width: '100%'}}
                 />
               </StyledFormInput>
             </StyledFormRow>
@@ -218,7 +219,7 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   value={inputValue}
                   onChange={handleInputChange}
                   // placeholder="johndoe@example.com"
-                  style={{height: '38px', textAlign: 'center', width: '100%'}}
+                  style={{height: '38px', width: '100%'}}
                 />
               </StyledFormInput>
             </StyledFormRow>
@@ -235,7 +236,7 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   value={inputValue}
                   onChange={handleInputChange}
                   // placeholder="johndoe@example.com"
-                  style={{height: '38px', textAlign: 'center', width: '100%'}}
+                  style={{height: '38px', width: '100%'}}
                 />
               </StyledFormInput>
             </StyledFormRow>
@@ -248,13 +249,23 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   style={{ marginBottom: '0.5rem' }}
                 />
                 <WInput
-                  type="text"
+                  type="textarea"
                   value={inputValue}
                   onChange={handleInputChange}
                   placeholder="Write to us"
-                  style={{height: '38px', textAlign: 'center', width: '100%'}}
+                  style={{height: '38px', width: '100%'}}
                 />
               </StyledFormInput>
+            </StyledFormRow>
+            <StyledFormRow>
+            <WButton
+              label="Contact us"
+              bgcolor="#b80b0a"
+              textColor="white"
+              width="115px"
+              rounded
+              // onClick={() => router.push('contactus')}
+            />
             </StyledFormRow>
           </StyledForm>
           <StyledImageMain>
