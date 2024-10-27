@@ -253,7 +253,7 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   value={inputValue}
                   onChange={handleInputChange}
                   placeholder="Write to us"
-                  style={{height: '38px', width: '100%'}}
+                  style={{height: '38px', width: '100%', resize: 'vertical'}}
                 />
               </StyledFormInput>
             </StyledFormRow>
