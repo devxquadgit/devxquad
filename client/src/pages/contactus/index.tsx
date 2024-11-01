@@ -76,6 +76,10 @@ const StyledFormContainer = styled.div`
 	align-items: center;
 	margin-top: 80px;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledForm = styled.div`
@@ -88,6 +92,15 @@ const StyledForm = styled.div`
   border-radius: 8px;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 1024px) {
+    width: 60%;
+  }
+  
+  @media (max-width: 768px) {
+    order: 1;
+    width: 100%;
+  }
 `;
 
 const StyledFormRow = styled.div`
