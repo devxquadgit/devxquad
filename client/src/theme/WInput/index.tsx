@@ -27,11 +27,12 @@ const StyledTextAreaInput = styled.textarea<{ type?:string, rounded?:boolean }>`
   resize: 'vertical';
 `;
 
-const index: React.FC<IWInputProps> = ({ type, value, onChange, rounded, placeholder, style }) => {
+const index: React.FC<IWInputProps> = ({ type, name, value, onChange, rounded, placeholder, style }) => {
   return (
     type !== 'textarea' ? 
     <StyledInput
       type={type}
+      name={name}
       value={value}
       onChange={onChange}
       placeholder={placeholder}
@@ -40,9 +41,10 @@ const index: React.FC<IWInputProps> = ({ type, value, onChange, rounded, placeho
     /> :
     <StyledTextAreaInput
       type={type}
+      name={name}
       value={value}
       rows={4}
-      // onChange={onChange}
+      onChange={onChange}
       placeholder={placeholder}
       style={style}
       rounded={rounded}

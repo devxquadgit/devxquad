@@ -139,10 +139,35 @@ const StyledImageMain = styled.div`
 
 const index: React.FC<IFeatureLayoutProps> = () => {
 
-  const [inputValue, setInputValue] = useState<string>('');
+  const [formValues, setFormValues] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    companyName: '',
+    phone: '',
+    message: ''
+  });
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(event.target.value);
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setFormValues({
+      ...formValues,
+      [name]: value
+    });
+  };
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+    console.log("Form Submitted:", formValues);
+    // Optionally, reset the form after submission
+    // setFormValues({
+    //   firstName: '',
+    //   lastName: '',
+    //   email: '',
+    //   companyName: '',
+    //   phone: '',
+    //   message: ''
+    // });
   };
 
   return (
@@ -178,8 +203,9 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   style={{ marginBottom: '0.5rem' }}
                 />
                 <WInput
+                  name="firstName"
                   type="text"
-                  value={inputValue}
+                  value={formValues.firstName}
                   onChange={handleInputChange}
                   placeholder="John"
                   style={{height: '38px', width: '100%'}}
@@ -194,8 +220,9 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   style={{ marginBottom: '0.5rem' }}
                 />
                 <WInput
+                  name="lastName"
                   type="text"
-                  value={inputValue}
+                  value={formValues.lastName}
                   onChange={handleInputChange}
                   placeholder="Doe"
                   style={{height: '38px', width: '100%'}}
@@ -211,8 +238,9 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   style={{ marginBottom: '0.5rem' }}
                 />
                 <WInput
+                  name="email"
                   type="email"
-                  value={inputValue}
+                  value={formValues.email}
                   onChange={handleInputChange}
                   placeholder="johndoe@example.com"
                   style={{height: '38px', width: '100%'}}
@@ -228,8 +256,9 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   style={{ marginBottom: '0.5rem' }}
                 />
                 <WInput
+                  name="companyName"
                   type="text"
-                  value={inputValue}
+                  value={formValues.companyName}
                   onChange={handleInputChange}
                   // placeholder="johndoe@example.com"
                   style={{height: '38px', width: '100%'}}
@@ -245,8 +274,9 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   style={{ marginBottom: '0.5rem' }}
                 />
                 <WInput
+                  name="phone"
                   type="text"
-                  value={inputValue}
+                  value={formValues.phone}
                   onChange={handleInputChange}
                   // placeholder="johndoe@example.com"
                   style={{height: '38px', width: '100%'}}
@@ -262,8 +292,9 @@ const index: React.FC<IFeatureLayoutProps> = () => {
                   style={{ marginBottom: '0.5rem' }}
                 />
                 <WInput
+                  name="message"
                   type="textarea"
-                  value={inputValue}
+                  value={formValues.message}
                   onChange={handleInputChange}
                   placeholder="Write to us"
                   style={{height: '38px', width: '100%', resize: 'vertical'}}
