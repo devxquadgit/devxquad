@@ -24,7 +24,8 @@ const StyledTextAreaInput = styled.textarea<{ type?:string, rounded?:boolean }>`
   font-weight: 400;
   line-height: 1.5;
   width: 100%;
-  resize: 'vertical';
+  resize: vertical;
+  font-family: Arial;
 `;
 
 const index: React.FC<IWInputProps> = ({ type, name, value, onChange, rounded, placeholder, style }) => {
