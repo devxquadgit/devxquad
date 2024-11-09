@@ -159,15 +159,7 @@ const index: React.FC<IFeatureLayoutProps> = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     console.log("Form Submitted:", formValues);
-    // Optionally, reset the form after submission
-    // setFormValues({
-    //   firstName: '',
-    //   lastName: '',
-    //   email: '',
-    //   companyName: '',
-    //   phone: '',
-    //   message: ''
-    // });
+    // async function which will push the data to backend
   };
 
   return (
@@ -308,7 +300,7 @@ const index: React.FC<IFeatureLayoutProps> = () => {
               textColor="white"
               width="115px"
               rounded
-              // onClick={() => router.push('contactus')}
+              onClick={(e:React.FormEvent) => handleSubmit(e)}
             />
             </StyledFormRow>
           </StyledForm>

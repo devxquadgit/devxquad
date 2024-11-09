@@ -6,6 +6,6 @@ export interface IWButtonProps {
   rounded?: boolean;
   submit?: boolean;
   loading?: boolean;
-  onClick?: () => void;
+  onClick?: (event: React.FormEvent) => void;
   style?: React.CSSProperties;
 }
