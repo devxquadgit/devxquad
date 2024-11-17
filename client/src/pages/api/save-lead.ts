@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-import nodemailer from 'nodemailer';
+import nodemailer from 'nodemailer'
 import { ILeadData } from '@/contracts/ILeadData';
 
 const LEAD_CSV_PATH = path.join(process.cwd(), 'lead.csv');
@@ -35,6 +35,12 @@ async function sendMail(subject: string, text: string, to: string) {
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  
+  if (req.method === 'GET') {
+    res.status(200).json({ message: 'Server is running!' });
+    return;
+  }
+
   if (req.method === 'POST') {
     const lead: ILeadData = req.body;
 
